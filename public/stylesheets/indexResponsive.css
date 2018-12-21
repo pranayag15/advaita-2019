@@ -1,0 +1,138 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.background{
+	z-index: -999;
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg.png");
+    background-position: center center;
+		background-repeat:  no-repeat;
+background-size: cover;
+overflow: hidden;
+}
+#bm{
+	position: absolute;
+	height: 50vh;
+	width: 30vh;
+	z-index: 1;
+	right: 0;
+	bottom:0;
+	overflow: hidden;
+	margin-bottom: -12vh;
+}
+.bottom{
+	position: absolute;
+	width: 100%;
+	height: 5vh;
+	bottom: 0;
+
+	background-color: black; 
+}
+.wheel{
+	position: absolute;
+	height: 15vh;
+	width: 10vh;
+	z-index: 1;
+	bottom: 5vh;
+	left: 5vh;
+	
+}
+.tent{
+	position: absolute;
+	height: 10vh;
+	width: 25vh;
+	z-index: 1;
+	bottom: 5vh;
+	left: 30%;
+}
+#roller{
+	position: absolute;
+	width: 100%;
+	bottom: 3vh;
+}
+.balloon1{
+	position: absolute;
+	top: 45vh;
+	left: 25vh;
+	height:6vh;
+	width: 4vh;
+}
+.balloon2{
+	position: absolute;
+	top: 30vh;
+	left: 130vh;
+	height:9vh;
+	width: 6vh;
+}
+.tree1{
+	position: absolute;
+	bottom: 5vh;
+	left: 35vh;
+	height: 10vh;
+	width: 8vh;
+}
+.tree2{
+	position: absolute;
+	bottom: 5vh;
+	left: 48vh;
+	height: 8vh;
+	width: 7vh;
+}
+.tree3{
+	position: absolute;
+	bottom: 5vh;
+	right: 3vh;
+	height: 15vh;
+	width: 12vh;
+}
+.logo{
+	position: absolute;
+	left: 28%;
+	top: 15%;
+	height: 20vh;
+	width: 50vh;
+	z-index: 10;
+
+}
+.light {
+	z-index: -999;
+	opacity: 0.8;
+  animation:top-right 5s ease-in-out alternate infinite;
+  border-bottom:none;
+  border-left:solid 20vh transparent;
+  border-right:solid 20vh transparent;
+  border-top:solid 200vh rgba(255, 255, 255, .2);
+  bottom:0;
+  height:0;
+  left:0;
+  position:absolute;
+  transform-origin:bottom;
+  width:0;
+}
+
+.light + .light {
+  animation:top-left 4s ease-in-out alternate infinite;
+  left:auto;
+  right:0;
+}
+
+@keyframes top-right {
+  0% {
+    transform:rotate(35deg);
+  }
+  100% {
+    transform:rotate(50deg);
+  }
+}
+
+@keyframes top-left {
+  0% {
+    transform:rotate(-35deg);
+  }
+  100% {
+    transform:rotate(-50deg);
+  }
+}

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700');
+@font-face {
+  src: url("../fonts/calendas_plus-webfont.ttf");
+  font-family: calendar;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* background-color: #00BCD4; */
+  background-image: url("https://images.unsplash.com/photo-1530633440486-5c2c43cb1dc9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=25159aac0552e1b09cd1d87971f88f52&auto=format&fit=crop&w=1050&q=80");
+  background-position: center;
+  background-size: cover;
+}
+.console-form {
+  background-color: rgba(28, 31, 37, 0.93);
+  width: 65%;
+  position: relative;
+  min-height: 80vh;
+  margin: 64px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
+  line-height: 1em;
+  display: block;
+  /* Custom scrollbar */
+
+}
+.console-form #taskbar {
+  background-color: #191919;
+  padding: 8px 12px;
+  text-align: center;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.05);
+  color: #eeeeee;
+}
+.console-form #taskbar #title {
+  text-align: center;
+  display: inline-block;
+  margin: 0 0;
+}
+.console-form #taskbar .buttons {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  float: left;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+.console-form #taskbar .buttons .button {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 16px;
+  padding: 0;
+  margin: 0 2px;
+  background-color: red;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1);
+}
+.console-form #taskbar .buttons .button#red {
+  background-color: #ff514e;
+}
+.console-form #taskbar .buttons .button#green {
+  background-color: #43a047;
+}
+.console-form #taskbar .buttons .button#yellow {
+  background-color: #d0b84f;
+}
+/* .console-form #taskbar #buttons2 {
+  float: right;
+  visibility: hidden;
+} */
+.console-form #console {
+  padding: 16px;
+  overflow-y: scroll;
+  height: 70%;
+  position: relative;
+}
+.console-form #console .cf-container {
+  padding-bottom: 64px;
+}
+.console-form #console form {
+  width: 100%;
+  position: relative;
+}
+.console-form #console .cf-line-row {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 3px 0;
+  position: relative;
+  font-size: 1.5em;
+  color: #cccccc;
+  font-family: 'Source Code Pro';
+  display: flex;
+}
+@media screen and (min-width: 0) and (max-width: 550px) {
+  .console-form #console .cf-line-row {
+    flex-direction: column;
+  }
+}
+.console-form #console .cf-line-row label{
+  position: relative;
+  top: 0;
+  color: #a70a99;
+  margin-top: 0.5em;
+  margin-bottom: 0 !important;
+  text-align: left;
+}
+.console-form #console .cf-line-row label::before{
+  content: '$~';
+}
+.console-form #console .cf-line-row label:after{
+  content: '> ';
+}
+@media screen and (min-width: 0) and (max-width: 550px) {
+  .console-form #console .cf-line-row label{
+    width: 100%;
+  }
+}
+/* .console-form #console .cf-line-row input[type="text"],
+.console-form #console .cf-line-row input[type="email"],
+.console-form #console .cf-line-row input[type="password"], */
+.console-form #console .cf-line-row input {
+  background-color: transparent;
+  border: none;
+  padding: 3px 6px;
+  color: #ffffff;
+  font-family: inherit;
+  flex-grow: 1;
+  margin-top: 1vh;
+    font-size: small;
+}
+/* .console-form #console .cf-line-row input[type="text"]:focus,
+.console-form #console .cf-line-row input[type="email"]:focus,
+.console-form #console .cf-line-row input[type="password"]:focus,
+.console-form #console .cf-line-row textarea:focus,
+.console-form #console .cf-line-row input[type="text"]:active,
+.console-form #console .cf-line-row input[type="email"]:active,
+.console-form #console .cf-line-row input[type="password"]:active,
+.console-form #console .cf-line-row textarea:active,
+.console-form #console .cf-line-row input[type="text"]:hover,
+.console-form #console .cf-line-row input[type="email"]:hover,
+.console-form #console .cf-line-row input[type="password"]:hover, */
+/* .console-form #console .cf-line-row textarea:hover {
+  background-color: rgba(255, 255, 255, 0.025);
+  box-shadow: none;
+  outline: none;
+}
+.console-form #console .cf-line-row input[type="text"]::selection,
+.console-form #console .cf-line-row input[type="email"]::selection,
+.console-form #console .cf-line-row input[type="password"]::selection,
+.console-form #console .cf-line-row textarea::selection {
+  background-color: white;
+  color: #1c1f25;
+}
+.console-form #console .cf-line-row textarea {
+  position: relative;
+  top: 0;
+  resize: vertical;
+  flex-grow: 2;
+  width: 100%;
+  padding-top: 0.5em;
+}
+.console-form #console .cf-line-row .cf-col {
+  display: inline-block;
+  position: relative;
+}
+.console-form #console .cf-line-row .cf-col#text-col {
+  border-left: 2px dashed #3a3a3a;
+  margin-left: 4px;
+  flex-grow: 1;
+}
+.console-form #console .cf-line-row .cf-col label {
+  position: relative;
+  top: 0;
+}
+.console-form #console .cf-line-row#message-row {
+  margin-top: 5px;
+}
+.console-form #console .cf-line-row#submit-row {
+  text-align: left !important;
+  /* Override reboot.scss */
+
+
+/* .console-form #console .cf-line-row#submit-row #submit-label {
+  display: inline-block;
+}
+.console-form #console .cf-line-row#submit-row .cf-button {
+  font-family: 'Source Code Pro';
+  color: #cccccc;
+  background-color: transparent;
+  border: none;
+} */
+
+.console-form #console .cf-line-row#submit-row .cf-button:hover {
+  cursor: pointer;
+}
+.console-form #console .cf-line-row#submit-row .cf-button:focus,
+.console-form #console .cf-line-row#submit-row .cf-button:hover {
+  background-color: #ffffff;
+  color: #1c1f25;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+/* .console-form #console .output-label {
+  position: relative;
+  top: 0;
+}
+.console-form #console .output-label::before {
+  content: '$';
+}
+.console-form #console .output-label:after {
+  content: '> ';
+} */
+.console-form #console .output-text {
+  position: relative;
+  top: 0.5em;
+  margin-left: 12px;
+}
+.console-form #console .output-line {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 3px 0;
+  margin: 16px 0;
+  position: relative;
+  font-size: 1.5em;
+  font-family: 'Source Code Pro';
+  display: flex;
+  text-align: left;
+}
+.console-form #console .output-line.output-error {
+  color: #ff514e;
+}
+.console-form #console .output-line.output-error .output-text,
+.console-form #console .output-line.output-error .output-label {
+  color: #ff514e;
+}
+.console-form #console .output-line.output-success {
+  color: #43a047;
+}
+.console-form #console .output-line.output-success div {
+  color: #43a047;
+}
+.console-form #console .output-line.output-info {
+  color: #cccccc;
+}
+.console-form #console .output-line.output-info div {
+  color: #cccccc;
+}
+.console-form #console .cf-button {
+  font-family: 'Source Code Pro';
+  color: #cccccc;
+  background-color: transparent;
+  border: none;
+  margin-top: 0.5em;
+}
+.console-form #console .cf-button:hover {
+  cursor: pointer;
+}
+.console-form #console .cf-button:focus,
+.console-form #console .cf-button:hover {
+  background-color: #ffffff;
+  color: #1c1f25;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.console-form ::-webkit-scrollbar {
+  width: 10px;
+}
+.console-form ::-webkit-scrollbar-track {
+  background: #2e323c;
+}
+.console-form ::-webkit-scrollbar-thumb {
+  background: #535c6e;
+  border-radius: 4px;
+}
+.console-form ::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f;
+} 
+
+/* ********************************************************************************************************** */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 2px solid aqua;
+  width: 30%;
+  border-radius: 8px;
+  /* height: 30%; */
+  height: 180px;
+  /* overflow: scroll; */
+}
+.msg {
+  font-family: calendar;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 15px;
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ********************************************************************************************************** */

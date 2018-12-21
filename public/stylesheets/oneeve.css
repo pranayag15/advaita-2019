@@ -1,0 +1,196 @@
+@font-face{
+    src: url("../fonts/Carnevalee\ Freakshow.ttf");
+    font-family: carnival-font;
+}
+@font-face{
+    src: url("../fonts/Raleway\ Thin.ttf");
+    font-family: rale-font;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+i {
+    opacity: 0;
+    font-size: 18px;
+    color: #fff;
+    will-change: transform;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+h2 {
+    pointer-events: none;
+}
+
+.cult_head {
+    font-size: 90px;
+    font-family: carnival-font;
+    color: rgb(255, 251, 251);
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+#bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -10;
+    /* opacity: 0.7; */
+}
+#bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.container1{
+    margin: 10px 5px 5px 0px;
+
+}
+.container2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    background-color: rgb(72, 31, 31);
+    overflow: hidden;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+.card:before {
+    content: "";
+    z-index: 99;
+    position: absolute;
+    top: -10px;
+    left: 32px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: #e6e5e1;
+}
+.card:after {
+    content: "";
+    z-index: 99;
+    position: absolute;
+    bottom: -10px;
+    left: 32px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: #e6e5e1;
+}
+.card ul {
+    z-index: 99;
+    position: absolute;
+    left: 39px;
+    top: 5px;
+    list-style-type: none;
+}
+.card ul li {
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    margin: 6px 0;
+    background-color: #e6e5e1;
+}
+.card h2 {
+    z-index: 99;
+    font-family: rale-font;
+    position: absolute;
+    bottom: 0;
+    right: 130px;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: rgb(248, 246, 246);
+}
+.card .fa-arrow-right {
+    z-index: 100;
+    position: absolute;
+    right: 75px;
+    bottom: 25px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.card p {
+    z-index: 99;
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    writing-mode: vertical-lr;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.card .pic {
+    z-index: 100;
+    width: 400px;
+    height: 200px;
+    background-image: url("https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80");
+    background-size: 100% 100%;
+    filter: grayscale(50%);
+}
+
+.card button {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 30px;
+    height: 30px;
+    background-color: #da4d1d;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    mix-blend-mode: hard-light;
+}
+.card button i {
+    font-size: 3rem;
+}
+.card:hover button {
+    transform: scale(16.5);
+}
+.card:hover p {
+    color: #fff;
+}
+.card:hover .pic {
+    filter: grayscale(0);
+}
+/* .card2 .pic {
+    background-image: url("https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80");
+} */
+.card2 button {
+    background-color: #b3b1a6;
+}
+.dr {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 100px;
+}

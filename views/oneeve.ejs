@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event</title>
+    <link rel="stylesheet" href="/stylesheets/oneeve.css">
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/grid.min.css" />
+</head>
+<body>
+
+    <% include navbar %>
+
+    <div id="bg">
+        <img src="/images/aurora3.2.jpg" alt="">
+    </div>
+    <div class="container container1">
+        <header >
+            <div class="container">
+                <div class="text-center">
+                    <p class="cult_head">CulturaL EventS</p>
+                </div>
+            </div>
+        </header>
+        <br>
+        <br>
+
+        <div class="text-center">
+            <div class="ui stackable two column grid">
+                <% catoevents.forEach((event) => { %>
+                <div class="column">
+                    <div class="card card2">
+                        <h2><%= event.name %></h2>
+                        <i class="fas fa-arrow-right"></i>
+                        <p>Confirm your entry!</p>
+                        <div class="pic" style="background-image: url('<%= event.img %>');">
+                        </div>
+                        <ul>
+                            <% for(var i=0; i<=22; i++){ %>
+                            <li></li>
+                            <% } %>
+                        </ul>
+                        <form action="/details/<%= event._id %>" method="GET">
+                            <button>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <%})%>
+             </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
