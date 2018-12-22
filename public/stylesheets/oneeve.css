@@ -13,6 +13,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #000000 !important;
+}
 i {
     opacity: 0;
     font-size: 18px;
@@ -25,6 +28,11 @@ i {
 }
 h2 {
     pointer-events: none;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 200%;
 }
 
 .cult_head {
@@ -71,7 +79,7 @@ h2 {
     position: relative;
     width: 500px;
     height: 200px;
-    background-color: rgb(72, 31, 31);
+    background-color: rgb(37, 149, 161);
     overflow: hidden;
     margin-bottom: 4px;
     border-radius: 5px;
@@ -186,7 +194,7 @@ h2 {
     background-image: url("https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80");
 } */
 .card2 button {
-    background-color: #b3b1a6;
+    background-color: floralwhite;
 }
 .dr {
     position: absolute;

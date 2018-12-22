@@ -30,7 +30,7 @@ nav ul li {
   transition: all 0.3s ease 0.1s;
   border: solid;
   border-width: 1px;
-  border-bottom-color: aquamarine;
+  border-bottom-color: darkcyan;
 }
 nav ul li a {
   display: table-cell;
