@@ -1,0 +1,41 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    position:absolute;
+    height: 100%;
+    width:100%;
+    overflow-y: hidden;
+    background-color:black;
+}
+.event-nav
+{
+    position: absolute;
+    top:30%;
+    left:5%;
+    color:white;
+    font-size:2vh;
+}
+.event-nav li
+{
+    padding-top:2vh;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.active
+{
+    font-size:3vh;
+    margin-left:3vh;
+}
+.body1
+{
+    position:absolute;
+    left:20%;
+    top:10%;
+    width:70%;
+    height:80%;
+}

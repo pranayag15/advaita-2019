@@ -22,6 +22,10 @@ router.get("/events", (req, res)=>{
   res.render("events")
 });
 
+router.get("/eventlist", (req, res)=>{
+  res.render("eventlist");
+});
+
 router.get("/user", (req, res)=>{
   if(req.user){
     res.json(req.user);

@@ -1,4 +1,6 @@
 *, *:before, *:after {
+  margin: 0;
+  /*padding: 0;*/
     box-sizing: border-box;
   }
   
@@ -21,14 +23,15 @@
   }
   #particles-js {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  z-index: -99;
 }
 
   .form {
     /*background: rgba(19, 35, 47, 0.9);*/
     /*background-color:black;*/
-    padding: 40px;
+    padding: 40px 40px 20px 40px;
     max-width: 600px;
     margin: 0px auto;
     border: solid;
@@ -161,6 +164,7 @@
     outline: none;
     border-radius: 0;
     padding: 15px 0;
+    /*padding-bottom: 0px;*/
     font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;

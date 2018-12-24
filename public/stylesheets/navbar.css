@@ -1,106 +1,127 @@
-
-/* *,
-*:before,
-*:after {
-  box-sizing: border-box;
-} */
-nav,
-nav ul {
+.button_container {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
 }
-nav {
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.8);
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #C4A243;
+}
+.button_container.active .middle {
   opacity: 0;
-  transform: scale(0.3);
-  transition: all 0.25s;
-  z-index: 999;
+  background: #C4A243;
 }
-nav ul li {
-  display: table;
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #C4A243;
+}
+.button_container span {
+  background: #C4A243;
+  border: none;
+  height: 5px;
   width: 100%;
-  height: calc(100% /5);
-  /* border-bottom: 1px solid rgba(80, 65, 65, 0.3); */
-  background: rgba(0, 0, 0, 0.897);
-  perspective: 0px;
-  transform: rotateX(-90deg) scale(0.5);
-  transition: all 0.3s ease 0.1s;
-  border: solid;
-  border-width: 1px;
-  border-bottom-color: darkcyan;
-}
-nav ul li a {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  font-size: 2.5em;
-  letter-spacing: 0.2em;
-  color: #fff;
-  text-shadow: 0 0 3px rgba(0,0,0,0.3);
-  font-family: 'Helvetica', sans-serif;
-  font-weight: 100;
-}
-nav ul li a:hover {
-  background: rgba(207, 201, 201, 0.3);
-  color: #fff;
-  text-decoration: none;
-}
-#toggle {
-  display: none;
-}
-#toggle + #toggle-btn,
-.nav-icon {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  border-radius: 3px;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
   cursor: pointer;
 }
-#toggle + #toggle-btn {
-  height: 40px;
-  width: 40px;
-  z-index: 1000;
-  background: rgba(0,0,0,0.05);
+.button_container span:nth-of-type(2) {
+  top: 11px;
 }
-.nav-icon,
-.nav-icon:before,
-.nav-icon:after {
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  background-color: darkcyan;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 0%;
+  z-index: 10;
+  overflow: hidden;
+}
+.overlay.open {
+  height: 100%;
+}
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+.overlay.open li:nth-of-type(5) {
+  animation-delay: .55s;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  top: 20%;
+  text-align: center;
+  /*height: 25%;*/
+  height: calc(100% / 10);
+  min-height: 35px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  font-size: 30px;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
   position: absolute;
-  height: 4px;
-  width: 40px;
-  margin: 18px 0;
-  z-index: 900;
-  border-radius: 3px;
-  background: #fff;
-  transition: all 0.25s;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #C4A243;
+  transition: .35s;
 }
-.nav-icon:before {
-  content: "";
-  margin-top: -18px;
-}
-.nav-icon:after {
-  content: "";
-  margin-top: 18px;
-}
-#toggle:checked ~ nav {
-  opacity: 1;
-  transform: scale(0.8);
-}
-#toggle:checked ~ .nav-icon {
-  background: rgba(46, 42, 42, 0);
-}
-#toggle:checked ~ .nav-icon:before {
-  transform: rotate(-225deg);
-  margin-top: 0;
-}
-#toggle:checked ~ .nav-icon:after {
-  transform: rotate(225deg);
-  margin-top: 0;
-}
-#toggle:checked ~ nav ul li {
-  transform: rotateY(0deg) scale(1);
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }

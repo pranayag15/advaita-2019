@@ -41,7 +41,9 @@ router.post("/details/:id", (req, res)=>{
         }
     })
 });
-
+router.get("/description", (req, res) => {
+   res.render("details"); 
+});
 router.get('/sports', function(req, res, next) {
     res.render("details");
   });
