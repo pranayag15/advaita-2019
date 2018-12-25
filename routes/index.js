@@ -25,6 +25,9 @@ router.get("/events", (req, res)=>{
 router.get("/eventlist", (req, res)=>{
   res.render("eventlist");
 });
+router.get("/sponsors", (req, res)=>{
+  res.render("sponsors");
+});
 
 router.get("/user", (req, res)=>{
   if(req.user){

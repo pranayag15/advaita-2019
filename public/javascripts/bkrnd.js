@@ -1,7 +1,7 @@
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 355,
+      "value": 450,
       "density": {
         "enable": true,
         "value_area": 789.1476416322727
@@ -13,7 +13,7 @@ particlesJS("particles-js", {
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 1,
+        "width": 1.5,
         "color": "#000000"
       },
       "polygon": {
@@ -36,11 +36,11 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 2,
+      "value": 3,
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 2,
+        "speed": 5,
         "size_min": 0,
         "sync": false
       }

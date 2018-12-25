@@ -5,7 +5,7 @@
   height: 27px;
   width: 35px;
   cursor: pointer;
-  z-index: 100;
+  z-index: 999;
   transition: opacity .25s ease;
 }
 .button_container:hover {
@@ -43,6 +43,7 @@
 
 .overlay {
   position: fixed;
+  z-index:990;
   background-color: darkcyan;
   top: 0;
   right: 0;
@@ -52,7 +53,7 @@
   align-items: center;
   width: 300px;
   height: 0%;
-  z-index: 10;
+  /*z-index: 100;*/
   overflow: hidden;
 }
 .overlay.open {
@@ -86,23 +87,28 @@
   display: block;
   top: 20%;
   text-align: center;
+  width: 300px;
   /*height: 25%;*/
   height: calc(100% / 10);
-  min-height: 35px;
+  min-height: 70px;
   position: relative;
   opacity: 0;
 }
 .overlay ul li a {
   display: block;
+  top: 15px;
   font-size: 30px;
   position: relative;
   color: white;
   text-decoration: none;
   overflow: hidden;
 }
-.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-  width: 100%;
+.overlay ul li:hover {
+  background-color: rgb(6, 94, 102);
 }
+/*.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {*/
+/*  width: 100%;*/
+/*}*/
 .overlay ul li a:after {
   content: '';
   position: absolute;

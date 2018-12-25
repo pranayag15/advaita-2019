@@ -10,25 +10,37 @@
     <title>Document</title>
 </head>
 <body>
+      <!--<a href="/main"><img class="logo" src="/images/advaita.png"></a>-->
     <% include navbar %>
     <div>
         <ul class="event-nav" id="menu">
-            <li><a href="#">Event 1</a></li>
-            <li><a href="#">Event 2</a></li>
-            <li><a href="#">Event 3</a></li>
-            <li><a href="#">Event 4</a></li>
-            
+            <li class="active"><a href="#" id="event1" onclick="iframeSRC('5c12131e3c2539033aaa2f11')">NUKKAD</a></li>
+            <li><a href="#" id="event2" onclick="iframeSRC('5c12131a3c2539033aaa2f0e')">ACOUSTICA</a></li>
+            <li><a href="#" id="event3" onclick="iframeSRC('5c12131c3c2539033aaa2f0f')">ROCKATHON</a></li>
+            <li><a href="#" id="event4" onclick="iframeSRC('5c12131c3c2539033aaa2f10')">CYPHER</a></li>
         </ul>
     </div>
     
     <div class="body1">
-        <iframe height="100%" width="100%" src="https://web-dev-believepranay.c9users.io/description"></iframe>
+        <iframe id="framy" height="100%" width="100%" src="https://web-dev-believepranay.c9users.io/details/5c12131e3c2539033aaa2f11"></iframe>
     </div>
+    <div class="back" ></div>
     <script>
         $("#menu li a").click(function() {
   $("#menu li").removeClass('active');
     $(this).parent().addClass('active');
 });
+    function iframeSRC( x)
+    {
+        // alert("done");
+        // console.log(document.getElementById("framy").src);
+        var src = "https://web-dev-believepranay.c9users.io/details/"+x;
+        // console.log(src);
+        document.getElementById("framy").src = src;
+    };
+    $(document).ready(function(){
+        console.log("yes");
+    });
     </script>
     <script src="/javascripts/menu.js"></script>
 </body>

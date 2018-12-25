@@ -8,7 +8,8 @@ body {
   /* height: 1000px; */
   position: relative;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  background-color: black;
 }
 .ferris{
   height: 250px;

@@ -5,38 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Events</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="/stylesheets/events.css">
-    <!-- <link rel="stylesheet" href="/stylesheets/navbar.css"> -->
+     <link rel="stylesheet" href="/stylesheets/navbar.css"> 
 </head>
 <body>
-          
-    <div class="back">
-    </div>
+    <% include navbar %>
+    <a href="/main"><img class="logoheading" src="/images/advaita.png"></a>
+    <!--<div class="back">-->
+    <!--</div>-->
     <div class="container">
     <div class="overlay-navigation">
         <nav role="navigation" class="pullUpDown">
             <ul>
-            <li class="border" ><a href="/show/cultural" data-content="The beginning">Cult</a></li>
-            <li class="border" ><a href="#" data-content="Curious?">Tech</a></li>
-            <li class="border" ><a href="#" data-content="I got game">Theatre</a></li>
-            <li class="border" ><a href="#" data-content="Only the finest">Sports</a></li>
-            <li class="border" ><a href="#" data-content="Don't hesitate">Photography</a></li>
+            <li class="border li1" ><a href="/eventlist" data-content="The beginning">Cult</a></li>
+            <li class="border li2" ><a href="#" data-content="Curious?">Tech</a></li>
+            <li class="border li3" ><a href="#" data-content="I got game">Theatre</a></li>
+            <li class="border li4" ><a href="#" data-content="Only the finest">Sports</a></li>
+            <li class="border li5" ><a href="#" data-content="Don't hesitate">Photography</a></li>
             </ul>
         </nav>
     </div>
     </div>
 
     <section class="home">
-    <!-- <div class="open-overlay">
-        <span class="bar-top"></span>
-        <span class="bar-middle"></span>
-        <span class="bar-bottom"></span>
-    </div> -->
+    <!-- <div class="open-overlay">-->
+    <!--    <span class="bar-top"></span>-->
+    <!--    <span class="bar-middle"></span>-->
+    <!--    <span class="bar-bottom"></span>-->
+    <!--</div>-->
     </section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
         <script src="/javascripts/events.js"></script>
+        <script src="/javascripts/menu.js"></script>
+    
 </body>
 </html>

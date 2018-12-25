@@ -17,11 +17,13 @@ router.get('/show/:category', (req, res)=>{
 });
 
 router.get("/details/:id", (req, res)=>{
+    // console.log(req.params.id);
         Events.findById(req.params.id, (err, event)=>{
             if(err){
                 console.log(err);
             } else {
                     // console.log(event);
+                    // res.json(event);
                     res.render("details", {details: event});
             }
         });

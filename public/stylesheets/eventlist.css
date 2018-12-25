@@ -7,10 +7,24 @@ body{
     height: 100%;
     width:100%;
     overflow-y: hidden;
-    background-color:black;
+    background-color: black;
+    background-image:url(https://images.unsplash.com/photo-1515550962725-a254324472e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:left;
+    overflow: hidden;
+}
+.logoheading {
+  position: absolute;
+  height: 18vh;
+  width: 25vh;
+  margin-top: 0% ;
+  margin-left: 0%;
+  z-index: 100;
 }
 .event-nav
 {
+    z-index:999;
     position: absolute;
     top:30%;
     left:5%;
@@ -25,17 +39,35 @@ body{
 a{
     text-decoration: none;
     color:white;
+    font-size: 1.5em;
+    letter-spacing: 2px;
 }
 .active
 {
     font-size:3vh;
     margin-left:3vh;
+    font-style: italic;
 }
 .body1
 {
+    z-index:9;
     position:absolute;
-    left:20%;
+    left:23%;
     top:10%;
     width:70%;
     height:80%;
+    box-shadow: 1.5vh 1.5vh 10px #888888;
+}
+#framy {
+    border: solid;
+    border-width: 2px;
+    border-color: darkcyan;
+}
+.back
+{
+    position:absolute;
+    background-color:black;
+    height:100%;
+    width:100%;
+    opacity:0.6;
 }
