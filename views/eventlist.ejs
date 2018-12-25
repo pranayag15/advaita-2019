@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-      <!--<a href="/main"><img class="logo" src="/images/advaita.png"></a>-->
+      <a href="/main"><img class="logoheading" src="/images/advaita.png"></a>
     <% include navbar %>
     <div>
         <ul class="event-nav" id="menu">
@@ -27,20 +27,21 @@
     <div class="back" ></div>
     <script>
         $("#menu li a").click(function() {
-  $("#menu li").removeClass('active');
-    $(this).parent().addClass('active');
-});
-    function iframeSRC( x)
-    {
-        // alert("done");
-        // console.log(document.getElementById("framy").src);
-        var src = "/details/"+x;
-        // console.log(src);
-        document.getElementById("framy").src = src;
-    };
-    $(document).ready(function(){
-        console.log("yes");
-    });
+            $("#menu li").removeClass('active');
+            $(this).parent().addClass('active');
+        });
+        
+        function iframeSRC(x){
+            // alert("done");
+            // console.log(document.getElementById("framy").src);
+            var src = "/details/"+x;
+            // console.log(src);
+            document.getElementById("framy").src = src;
+        };
+        
+        $(document).ready(function(){
+            console.log("yes");
+        });
     </script>
     <script src="/javascripts/menu.js"></script>
 </body>

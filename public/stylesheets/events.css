@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+@font-face{
+  src: url("../fonts/Carnevalee\ Freakshow.ttf");
+  font-family: carnival-font;
+}
 body {
-  position:absolute;
-  height:100%;
-  width:100%;
-  overflow:hidden;
   background-color: #fff
 }
 *{
@@ -14,7 +14,7 @@ body {
   position: absolute;
   height: 18vh;
   width: 25vh;
-  margin-top: 0% ;
+  margin-top: -1.5% ;
   margin-left: 0%;
   z-index: 100;
 }
@@ -23,12 +23,25 @@ body {
   height: 100vh;
   position: absolute;
   background-color: black;
-  /*background-image: url(/images/mask1.png);*/
+  background-image: url(/images/mask1.png);
+  filter: brightness(40%);
   background-size: auto;
   background-position:bottom;
   background-repeat: no-repeat;
   overflow:hidden;
   z-index:-1;
+}
+.cato {
+  position: absolute;
+  font-family:carnival-font; 
+  color: white;
+  font-size: 90px;
+  font-style: italic;
+  left: 40%;
+  text-decoration: none;
+  /*text-transform: uppercase;*/
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 .back
 {
@@ -63,7 +76,6 @@ Navigation
   left: 0;
   width: 100%;
   height: 80%;
-  overflow:hidden;
   /*background-color: hsla(0, 25%, 90%, 0.2);*/
   display: none;
   opacity: 0;
@@ -116,7 +128,7 @@ nav li a {
   text-decoration: none;
   display: block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   opacity: 0;
 }
 
@@ -370,54 +382,15 @@ Animation keyframes
 
 @media (max-width: 640px) {
   nav ul {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  /*nav ul li {*/
-  /*  position:absolute;*/
-  /*  width:100%;*/
-  /*  height: 100%;*/
-  /*}*/
-  .li1
-  {
-    position:absolute;
-    height:100%;
-    width:95%;
+  nav ul li {
+    height: 20%;
   }
-    .li2
-  {
-    position:absolute;
-    top:100%;
-    height:100%;
-    width:95%;
-  }
-    .li3
-  {
-    position:absolute;
-    top:200%;
-    height:100%;
-    width:95%;
-  }
-    .li4
-  {
-    position:absolute;
-    top:300%;
-    height:100%;
-    width:95%;
-  }
-    .li5
-  {
-    position:absolute;
-    top:400%;
-    height:100%;
-    width:95%;
-  }
-  .overlay-navigation {
-    overflow-y:scroll;
-}
   nav ul li a {
     font-size: 11px;
   }
