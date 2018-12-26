@@ -2,7 +2,13 @@
 	padding: 0;
 	margin: 0;
 }
-
+body
+{
+	position:absolute;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
 .background{
 	z-index: -999;
 	position: absolute;
@@ -136,4 +142,38 @@ overflow: hidden;
   100% {
     transform:rotate(-50deg);
   }
+}
+@media (max-width: 640px) {
+  .balloon1, .light
+  {
+  	display:none;
+  }
+  .tent
+  {
+  	height:10vh;
+  	width:30vh;
+  	left:20%;
+  }
+	#roller
+	{
+		/*display:none;*/
+	}
+	.wheel
+	{
+		left:1%;
+		height:40vh;
+		width:20vh;
+	}
+	#bm
+	{
+		right:-10%;
+		bottom:10vh;
+		width: 40vh;
+		height:40vh;
+	}
+	.logo
+	{
+		left:5%;
+	}
+	
 }

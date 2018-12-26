@@ -43,12 +43,30 @@ router.post("/details/:id", (req, res)=>{
         }
     })
 });
+
+router.get("/cultural", (req, res)=>{
+  res.render("cultural");
+});
+
+router.get("/technical", (req, res)=>{
+  res.render("technical");
+});
+
+router.get("/theatre", (req, res)=>{
+  res.render("theatre");
+});
+
+router.get("/sports", (req, res)=>{
+  res.render("sports");
+});
+
+router.get("/photography", (req, res)=>{
+  res.render("photography");
+});
+
 router.get("/description", (req, res) => {
    res.render("details"); 
 });
-router.get('/sports', function(req, res, next) {
-    res.render("details");
-  });
 
 router.get('/error', function(req, res, next) {
     console.log(req.flash);
