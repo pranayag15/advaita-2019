@@ -1,43 +1,81 @@
 body{
-    margin: 55px;
+    /*position:absolute;*/
+    /*height:100%;*/
+    width:100%;
+    overflow-y: scroll;
+    margin: 10%;
     background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Download-black-woody-hd-hd-1080p-wallpaper-620x349.jpg");
     background-size:cover;
     background-position:center;
 }
 h1{
-    padding: 20px;
+    padding: 0.5%;
     color: white;
-    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    margin-left: 27%
+}
+@media screen and (max-width: 960px){
+    h1{
+        text-align: center;
+        padding: 10%;
+    
+    }
 }
 .logoheading {
   position: fixed ;
-  height: 18vh !important;
-  width: 25vh !important;
-  margin-top: -5% !important ;
-  margin-left: -4% !important ;
+  height: 18vh ;
+  width: 25vh ;
+  margin-top: 0.5% ;
+  margin-left: -4%  ;
   z-index: 100;
 }
 .card{
     height: auto;      
     background-color: white;
     text-align: center;
-    padding: 2px;
-    border: 3px solid darkcyan; 
+    padding: 0.5%;
 }
-#title{
-    margin-left:170px;    
+@media screen and (max-width: 960px)
+{
+    .card{
+        padding: 0.3%;
+    }
 }
 
+
+#title{
+    margin-left:10%;
+    margin-right:25%;    
+}
+@media screen and (max-width: 960px)
+{
+    #title{
+      margin-left: -10.0%;
+      
+    }
+    
+}
 
 .card-columns{
-    padding: 20px;
-    margin: 5px;
+    padding: 1.0%;
+    margin: 5%;
    
 }
-.container{
-    
-    margin: 70px;
+@media screen and (max-width: 960px)
+{
+    .card-columns{
+        padding: 0%;
+    }
+}
+.container{    
+    margin-left: -7.5%;
+}
+@media screen and (max-width: 960px)
+{
+    .container{
+        padding: 0%;
+        margin-left: -1.5%;
+    }
 }
 img{
     /*border: 2px solid darkcyan; */

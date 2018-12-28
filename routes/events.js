@@ -73,6 +73,10 @@ router.get('/error', function(req, res, next) {
     res.send("han han");
 });
 
+router.get('*', (req, res) => {
+   res.render("error"); 
+});
+
 function isLoggedin(req, res, next){
     if(req.isAuthenticated()){
        return next();
