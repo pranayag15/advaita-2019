@@ -10,6 +10,13 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
+router.get("/url", (req, res) => {
+  console.log(req.protocol + '://' +req.get('host')+req.originalUrl);
+  console.log(req.protocol)
+  // res.json(req.protocol + '://' +req.get('host')+req.path);
+  res.send(req);
+});
+
 router.get('/main', (req, res)=>{
   res.render('index1');
 });
@@ -34,7 +41,9 @@ router.get("/user", (req, res)=>{
   }
 });
 
-
+router.get("/gallery", (req, res) => {
+  res.render("gallery");
+});
 
 router.get("/team", (req, res)=>{
   res.render("team");

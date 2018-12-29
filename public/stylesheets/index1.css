@@ -97,7 +97,7 @@ overflow: hidden;
 }
 .logo{
 	position: absolute;
-	left: 38%;
+	left: 34%;
 	top: 15%;
 	height: 50vh;
 	width: 60vh;
@@ -173,7 +173,7 @@ overflow: hidden;
 	}
 	.logo
 	{
-		left:2%;
+		left:1%;
 	}
 	
 }

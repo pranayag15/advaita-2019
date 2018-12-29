@@ -13,11 +13,15 @@
       <a href="/main"><img class="logoheading" src="/images/advaita.png"></a>
     <% include navbar %>
     <div>
-        <ul class="event-nav" id="menu">
-            <li class="active"><a href="#" id="event1" onclick="iframeSRC('5c12131e3c2539033aaa2f11')">NUKKAD</a></li>
-            <li><a href="#" id="event2" onclick="iframeSRC('5c12131a3c2539033aaa2f0e')">ACOUSTICA</a></li>
-            <li><a href="#" id="event3" onclick="iframeSRC('5c12131c3c2539033aaa2f0f')">ROCKATHON</a></li>
-            <li><a href="#" id="event4" onclick="iframeSRC('5c12131c3c2539033aaa2f10')">CYPHER</a></li>
+        <ul type="none" class="event-nav desktop" id="menu">
+            <!--<li class="active"><a href="#" id="event1" onclick="iframeSRC('5c12131e3c2539033aaa2f11')">NUKKAD</a></li>-->
+            <!--<li><a href="#" id="event2" onclick="iframeSRC('5c12131a3c2539033aaa2f0e')">ACOUSTICA</a></li>-->
+            <!--<li><a href="#" id="event3" onclick="iframeSRC('5c12131c3c2539033aaa2f0f')">ROCKATHON</a></li>-->
+            <!--<li><a href="#" id="event4" onclick="iframeSRC('5c12131c3c2539033aaa2f10')">CYPHER</a></li>-->
+            <li><button class="raise active"  onclick="iframeSRC('5c12131e3c2539033aaa2f11')" ><a href="#" id="event4">NUKKAD</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c12131a3c2539033aaa2f0e')" ><a href="#" id="event4">ACOUSTICA</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f0f')" ><a href="#" id="event4">ROCKATHON</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f10')" ><a href="#" id="event4">CYPHER</a></button></li>
         </ul>
     </div>
     
@@ -25,11 +29,36 @@
         <iframe id="framy" height="100%" width="100%" src="/details/5c12131e3c2539033aaa2f11"></iframe>
     </div>
     <div class="back" ></div>
+    <div id="notch" onclick="notchToggel()">
+        Menu
+    </div>
+    <div id="notch-menu" ></div>
+        <ul type="none" class="event-nav" id="mobile">
+            <!--<li class="active"><a href="#" id="event1" onclick="iframeSRC('5c12131e3c2539033aaa2f11')">NUKKAD</a></li>-->
+            <!--<li><a href="#" id="event2" onclick="iframeSRC('5c12131a3c2539033aaa2f0e')">ACOUSTICA</a></li>-->
+            <!--<li><a href="#" id="event3" onclick="iframeSRC('5c12131c3c2539033aaa2f0f')">ROCKATHON</a></li>-->
+            <!--<li><a href="#" id="event4" onclick="iframeSRC('5c12131c3c2539033aaa2f10')">CYPHER</a></li>-->
+            <li><button class="raise active"  onclick="iframeSRC('5c12131e3c2539033aaa2f11')" ><a href="#" id="event4">NUKKAD</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c12131a3c2539033aaa2f0e')" ><a href="#" id="event4">ACOUSTICA</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f0f')" ><a href="#" id="event4">ROCKATHON</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f10')" ><a href="#" id="event4">CYPHER</a></button></li>
+        </ul>
     <script>
-        $("#menu li a").click(function() {
-            $("#menu li").removeClass('active');
-            $(this).parent().addClass('active');
-        });
+        // var header = document.getElementById("myDIV");
+var btns = document.getElementsByClassName("raise");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+};
+        function notchToggel()
+        {
+            document.getElementById("notch").style.display = "none";
+            document.getElementById("notch-menu").style.display = "block";
+            document.getElementById("mobile").style.display = "block";
+        }
         
         function iframeSRC(x){
             // alert("done");
@@ -37,6 +66,9 @@
             var src = "/details/"+x;
             // console.log(src);
             document.getElementById("framy").src = src;
+            document.getElementById("notch").style.display = "block";
+            document.getElementById("notch-menu").style.display = "none";
+            document.getElementById("mobile").style.display = "none";
         };
         
         $(document).ready(function(){

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
 .button_container {
   position: fixed;
   top: 5%;
@@ -44,7 +45,7 @@
 .overlay {
   position: fixed;
   z-index:990;
-  background-color: darkcyan;
+  background-color: #1a6d75;
   top: 0;
   right: 0;
   display: flex;
@@ -75,6 +76,9 @@
 .overlay.open li:nth-of-type(5) {
   animation-delay: .55s;
 }
+.overlay.open li:nth-of-type(6) {
+  animation-delay: .60s;
+}
 .overlay ul {
   list-style: none;
   padding: 0;
@@ -95,6 +99,9 @@
   opacity: 0;
 }
 .overlay ul li a {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: 2px;
   display: block;
   top: 15px;
   font-size: 30px;
@@ -130,5 +137,11 @@
   100% {
     opacity: 1;
     left: 0;
+  }
+}
+
+@media (max-width: 640px){
+  .overlay{
+    width: 100%;
   }
 }

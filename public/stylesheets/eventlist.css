@@ -45,9 +45,7 @@ a{
 }
 .active
 {
-    font-size:3vh;
-    margin-left:3vh;
-    font-style: italic;
+box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
 }
 .body1
 {
@@ -71,4 +69,84 @@ a{
     height:100%;
     width:100%;
     opacity:0.6;
+}
+button {
+  background: none;
+  border: 2px solid #ffa260;
+  font: inherit;
+  line-height: 1;
+  margin: 0.2em;
+  padding: 1em 2em;
+  width: 90%;
+  cursor: pointer;
+  /*z-index: -1;*/
+}
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+.raise {
+  color: #ffa260;
+  /*color: darkcyan;*/
+  --hover: #e5ff60;
+}
+
+#notch
+{
+ position:absolute;
+ z-index:9999;
+ left:2.5%;
+ cursor:pointer;
+ font-size:2vh;
+ top:48%;
+ background-color:black;
+ padding:2vh;
+ color:white;
+ transform: rotate(90deg);
+	transform-origin: left top 0;
+	float: left;
+	display:none;
+}
+#notch-menu
+{
+    position:absolute;
+    z-index:9999;
+    height:100%;
+    width:80%;
+    background-image:url(https://images.unsplash.com/photo-1515550962725-a254324472e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:left;
+    display:none;
+}
+#mobile
+{
+    z-index:9999;
+    display:none;
+}
+
+@media (max-width: 640px)
+{
+    .desktop
+    {
+        display:none;
+    }
+    #notch
+    {
+        display:block;
+    }
+    .body1
+{
+    z-index:9;
+    position:absolute;
+    left:5%;
+    top:15%;
+    width:90%;
+    height:80%;
+    box-shadow: 1.5vh 1.5vh 10px #888888;
+}
+    
+
 }
