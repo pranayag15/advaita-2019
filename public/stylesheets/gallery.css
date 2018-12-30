@@ -30,6 +30,10 @@ body {
   margin-left: -50%;
   z-index:49;
 }
+.space{
+  /*margin-left: 5%;*/
+  /*margin-right: 5%;*/
+}
 .m-p-g {
   max-width: 100%;
   margin: 0 auto;
@@ -58,8 +62,10 @@ body {
   opacity: 0;
 }
 .m-p-g__thumbs-img:hover {
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .m-p-g__fullscreen {
   position: fixed;
@@ -205,4 +211,12 @@ body {
     min-width: 0;
     font-size: 14px;
   }
+}
+canvas {
+/*     position:absolute; */
+    z-index:-999;
+    position: absolute;
+    filter:brightness(40%);
+    top: 0;
+    left: 0;
 }

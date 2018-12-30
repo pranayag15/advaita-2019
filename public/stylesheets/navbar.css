@@ -45,9 +45,10 @@
 .overlay {
   position: fixed;
   z-index:990;
-  /*background-color: #1a6d75;*/
+  background-color: #0d565d;
   /*background-color: #093728bd;*/
-  background-color: #27290fc4;
+  /*background-color: #27290fc4;*/
+  opacity: 0.92;
   top: 0;
   right: 0;
   display: flex;
@@ -117,7 +118,7 @@
 }
 .overlay ul li:hover {
   /*background-color: rgb(6, 94, 102);*/
-  background-color: #57e2a196;
+  background-color: #049a8b96;
 }
 /*.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {*/
 /*  width: 100%;*/

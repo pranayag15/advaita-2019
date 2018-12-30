@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="/stylesheets/gallery.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/material-photo-gallery.min.js" ></script>
+     <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
 </head>
 <body>
       <a href="/main"><img class="logoheading" src="/images/advaita.png"></a>
   	<% include navbar %>
+  		<!--<canvas id='c'></canvas>-->
 <p class="heading">GallerY</p>
 <div class="m-p-g">
-	<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+	<div class="space">
+			<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
 		<img src="/advaita_gallery/pic1.jpg" data-full="/advaita_gallery/pic1.jpg" class="m-p-g__thumbs-img" />
 		<img src="/advaita_gallery/pic2.jpg" data-full="/advaita_gallery/pic2.jpg" class="m-p-g__thumbs-img" />
 		<img src="/advaita_gallery/pic3.jpg" data-full="/advaita_gallery/pic3.jpg" class="m-p-g__thumbs-img" />
@@ -40,10 +43,11 @@
 		<img src="/advaita_gallery/pic23.jpg" data-full="/advaita_gallery/pic23.jpg" class="m-p-g__thumbs-img" />
 		<img src="/advaita_gallery/pic24.jpg" data-full="/advaita_gallery/pic24.jpg" class="m-p-g__thumbs-img" />
 	</div>
-
+	</div>
 	<div class="m-p-g__fullscreen"></div>
 </div>
 <script src="/javascripts/menu.js"></script>
+<script src="javascripts/back.js"></script>
 <script>
 	var elem = document.querySelector('.m-p-g');
     console.log(elem);

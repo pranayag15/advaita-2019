@@ -34,5 +34,5 @@
     autoplay: false,
     path: 'upper.json'
   })
-  setTimeout(function(){ animation.play(); }, 4400);
+  setTimeout(function(){ animation.play(); }, 2400);
   setTimeout(function(){ animationupper.play(); }, 8100);

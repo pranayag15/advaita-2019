@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>Sponsors</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="/stylesheets/sponsors.css">
         <link rel="stylesheet" href="/stylesheets/navbar.css">
@@ -13,6 +14,8 @@
     </head>
     <body>
     <% include navbar %>
+    <canvas id='c'></canvas>
+    <!--<canvas id='c' style="top:100%"></canvas>-->
     <a href="/main"><img class="logoheading" src="/images/advaita.png"></a>
     <h1>TITLE SPONSORS</h1>
        <div class="container" id="title">
@@ -23,18 +26,14 @@
                <div class="card">
                <img alt="Card image cap" class="card-img-top img-fluid" src="http://www.etv.co.za/sites/etv.co.za/files/styles/large/public/coke_1_1.jpg?itok=QHtJO1mn">
                </div>
-           </div>
-       </div>
-        <div class="container" id="title">
-            <div class="card-columns">
-                <div class="card">
+               <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://static-news.moneycontrol.com/static-mcnews/2018/09/407911-nalco-770x433.jpg">
                 </div>
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.iocl.com/images/static/indianoil_logo.jpg">
                 </div>
-            </div>
-        </div>
+           </div>
+       </div>
         <h1 id="other">OTHER SPONSORS</h1>
         <div class="container">
             <div class="card-columns">
@@ -47,23 +46,15 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://i0.wp.com/whataftercollege.com/wp-content/uploads/2017/05/rcpl.png?fit=250%2C190">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://static.adweek.com/adweek.com-prod/wp-content/uploads/files/blogs/google-logo-hed-2014.jpg">
                 </div>
-                <div class="card">
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="http://www.efindout.com/wp-content/uploads/2016/04/Andhra-Bank.png">
                 </div>
-                <div class="card">
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://cdn1.tvnz.co.nz/content/dam/images/news/2018/11/06/ola.jpg.hashed.af7924e1.desktop.story.inline.jpg">
-                </div>               
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
+                </div>   
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2015/12/27/409033-asusrepublicofgamersroghdbyleandrojvarini-d4cca47-edited.jpg">
                 </div>
@@ -72,12 +63,8 @@
                 </div>
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://d2j1mo4repc142.cloudfront.net/cdn/142218/media/wysiwyg/logos/skybags-logo.jpg">
-                </div>               
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                </div>  
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.bucdays.com/wp-content/uploads/Pepsi-logo-in-box-300x300.jpg">
                 </div>
                 <div class="card">
@@ -85,12 +72,8 @@
                 </div>
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.livenewson.com/wp-content/uploads/2015/04/Odisha-TV-1.png">
-                </div>                
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                </div>     
+                  <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://vignette.wikia.nocookie.net/logopedia/images/5/52/Reliance_Trends_Logo.jpg/revision/latest/scale-to-width-down/280?cb=20181213104105">
                 </div>                
                 <div class="card">
@@ -99,11 +82,7 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="http://1.bp.blogspot.com/-vsgFu4Rj-_M/VVDVDhUOzKI/AAAAAAAAAjw/yfnfOtPgCaI/s400/unnamed.jpg">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://sopro.io/wp-content/uploads/2016/09/sopro_final_72.png">
                 </div>
                 <div class="card">
@@ -111,12 +90,8 @@
                 </div>
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://s.yimg.com/ny/api/res/1.2/YJmrhrtb99jgwbBGiOPfHA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NjIwO2g9MjM1/http://media.zenfs.com/en-US/homerun/zacks.com/6471bac5cfa449a2ce8cf60d86f0145d">
-                </div>               
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                </div>   
+                  <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dell_logo_2016.svg/200px-Dell_logo_2016.svg.png">
                 </div>
                 <div class="card">
@@ -125,10 +100,6 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/GAIL_Logo.svg/200px-GAIL_Logo.svg.png">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://5.imimg.com/data5/QY/KQ/ZK/SELLER-7531852/slazenger-kids-t-shirts-120x120.jpg">
                 </div>
@@ -138,11 +109,7 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://i0.wp.com/inc42.com/wp-content/uploads/2012/08/tw.jpg?w=625&ssl=1">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.nuaodisha.com/images/Contents/NuaOdisha-129-idco_logo.jpg">
                 </div>
                 
@@ -152,11 +119,6 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://1000logos.net/wp-content/uploads/2017/05/NVIDIA-Logo-500x348.png">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/IEEE_logo.svg/250px-IEEE_logo.svg.png">
                 </div>
@@ -167,10 +129,6 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://images.click.in/classifieds/images/190/28_06_2017_10_59_26_7pbrqi3a3f3b1h3ruvh5a3je37_6dgxkbho2i.png">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Bharat_Petroleum_Logo.svg/220px-Bharat_Petroleum_Logo.svg.png">
                 </div>
@@ -180,10 +138,6 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://yt3.ggpht.com/a-/AAuE7mB3c5l6zEkHXbBA7FxqnaPBs3QMj9glBq0gGA=s288-mo-c-c0xffffffff-rj-k-no">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="http://www.empireshotel.com/admin/assets/user/images/logo.png">
                 </div>
@@ -193,10 +147,6 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.ntpc.co.in/sites/all/themes/ntpc/images/ntpc-logo.svg">
                 </div>
@@ -206,11 +156,7 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.thefirstteeeastlake.org/wp-content/uploads/sites/99/2016/07/hp-logo-300x140.jpg">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="http://www.fetchlogos.com/wp-content/uploads/2015/12/Big-Bazaar-Logo-600x319.jpg">
                 </div>
                 <div class="card">
@@ -219,11 +165,7 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://scontent.fbbi1-1.fna.fbcdn.net/v/t1.0-0/p370x247/12391407_797198397069886_3590384963018196159_n.jpg?_nc_cat=105&_nc_ht=scontent.fbbi1-1.fna&oh=7a25f28af09551a9806f33815571c80b&oe=5C8D2645">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.btvi.in/media/images/news/Zoomca.jpg">
                 </div>
                 <div class="card">
@@ -232,10 +174,6 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://scontent.fbbi1-1.fna.fbcdn.net/v/t1.0-9/19399330_1411214912305006_8517181322162700623_n.jpg?_nc_cat=101&_nc_ht=scontent.fbbi1-1.fna&oh=4b12c72b7b4e63fcd23bf638606b0339&oe=5C986DF5">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">  
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="http://printlinkindia.com/wp-content/uploads/2018/05/printlink-logo-1_4c6147ec655dff1c1600991dee10247f.jpg">
                 </div>
@@ -244,12 +182,8 @@
                 </div>
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://1.bp.blogspot.com/-e5U795fCCdQ/WU5aVMf8GkI/AAAAAAAAABs/fkikl8_teHk-Gglj8m7Qpy9TjorhzbTPACLcBGAs/s1600/OCAC%2Blogo.jpg">
-                </div>                
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                </div>   
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/SAIL_Logo.svg/200px-SAIL_Logo.svg.png">
                 </div>               
                 <div class="card">
@@ -258,19 +192,106 @@
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://www.nuaodisha.com/images/Contents/NuaOdisha-112914-occ.jpg">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card-columns">
-                <div class="card">
+                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="https://content3.jdmagicbox.com/comp/bhubaneshwar/u3/0674px674.x674.160326154503.l2u3/catalogue/vajirao-ias-academy-pvt-ltd--bhubaneshwar-e1j5m.jpg">
                 </div>
                 <div class="card">
                     <img alt="Card image cap" class="card-img-top img-fluid" src="http://cloud.millenniumpost.in/3862p9VMhi6rv2WoUTBHFqV8DHAlFWioqe4k9856522/3862p9vmhi6rv2woutbhfqv8dhalfwioqe4k9856522.jpeg">
                 </div>
-              
             </div>
         </div>
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                
+               
+                           
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                
+                
+                             
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                       
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+              
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                           
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+              
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+               
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                
+                
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+                
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+               
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+               
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">  -->
+                             
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+               
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+        <!--    <div class="card-columns">-->
+               
+              
+        <!--    </div>-->
+        <!--</div>-->
+        <script src="javascripts/back.js"></script>
      <script src="/javascripts/menu.js"></script>  
     </body>
 </html>

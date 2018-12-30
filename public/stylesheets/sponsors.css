@@ -4,9 +4,8 @@ body{
     width:100%;
     overflow-y: scroll;
     margin: 10%;
-    background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Download-black-woody-hd-hd-1080p-wallpaper-620x349.jpg");
-    background-size:cover;
-    background-position:center;
+    /*background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Download-black-woody-hd-hd-1080p-wallpaper-620x349.jpg");*/
+    background-color:black;
 }
 .head
 {
@@ -61,6 +60,11 @@ h1{
     }
 }
 
+#other
+{
+    width:100%;
+    
+}
 
 #title{
     margin-left:10%;
@@ -118,4 +122,14 @@ img{
     {
         margin-left: 10%;
     }
+}
+
+canvas {
+/*     position:absolute; */
+    z-index:-999;
+    position: absolute;
+    filter:brightness(40%);
+    top: 0;
+    left: 0;
+    height:300%;
 }

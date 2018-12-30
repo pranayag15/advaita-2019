@@ -462,3 +462,11 @@ Animation keyframes
     width:15vh;
   }
 }
+canvas {
+/*     position:absolute; */
+    z-index:-999;
+    position: absolute;
+    filter:brightness(40%);
+    top: 0;
+    left: 0;
+}

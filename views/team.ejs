@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+     <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -15,10 +16,11 @@
     <title>Team</title>
 </head>
 <body>
-  <div id="particles-js"></div>
-
+  <!--<div id="particles-js"></div>-->
+  	
   <a href="/main"><img class="logoheading" src="/images/advaita.png"></a>
   	<% include navbar %>
+  <canvas id='c'></canvas>
     <header>
         <div class="container">
             <div class="text-center">
@@ -82,8 +84,9 @@
     </figure>
   </div>
   
-<script src="/javascripts/bkrnd.js"></script>
+<!--<script src="/javascripts/bkrnd.js"></script>-->
 <script src="/javascripts/menu.js"></script>
+<script src="javascripts/back.js"></script>
 <script>
     $(".hover").mouseleave(
     function () {
