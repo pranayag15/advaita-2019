@@ -102,8 +102,32 @@ overflow: hidden;
 	height: 50vh;
 	width: 60vh;
 	z-index: 10;
+}
+.anilogo{
+	/*position: absolute;*/
+	/*left: 25%;*/
+	/*top: 0%;*/
+	/*height: 90vh;*/
+	/*width: 100vh;*/
+	/*z-index: 10;*/
+	position: absolute;
+	left: 31%;
+	top: -1%;
+	height: 70vh;
+	width: 70vh;
+	z-index: 10;
+}
+.upper{
+	position: absolute;
+	left: 31%;
+	top: -1%;
+	height: 70vh;
+	width: 70vh;
+  z-index: 11;
 
 }
+
+
 .light {
 	z-index: -999;
 	opacity: 0.8;

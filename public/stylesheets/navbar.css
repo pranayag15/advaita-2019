@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Dosis:6000');
 .button_container {
   position: fixed;
   top: 5%;
@@ -45,7 +45,9 @@
 .overlay {
   position: fixed;
   z-index:990;
-  background-color: #1a6d75;
+  /*background-color: #1a6d75;*/
+  /*background-color: #093728bd;*/
+  background-color: #27290fc4;
   top: 0;
   right: 0;
   display: flex;
@@ -99,7 +101,9 @@
   opacity: 0;
 }
 .overlay ul li a {
-  font-family: 'Cinzel', serif;
+  /*font-family: 'Cinzel', serif;*/
+  /*font-family: 'Alegreya Sans SC', sans-serif;*/
+  font-family: 'Dosis', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
   display: block;
@@ -112,7 +116,8 @@
   overflow: hidden;
 }
 .overlay ul li:hover {
-  background-color: rgb(6, 94, 102);
+  /*background-color: rgb(6, 94, 102);*/
+  background-color: #57e2a196;
 }
 /*.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {*/
 /*  width: 100%;*/

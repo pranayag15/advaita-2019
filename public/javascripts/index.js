@@ -18,12 +18,21 @@
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'threerollercoaster.json'
+    path: 'chotidabbi.json'
   })
   var animation = bodymovin.loadAnimation({
     container: document.getElementById('anilogo'),
     renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'advaitalogo.json'
+    loop: false,
+    autoplay: false,
+    path: 'testlogo2.json'
   })
+   var animationupper = bodymovin.loadAnimation({
+    container: document.getElementById('upper'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: 'upper.json'
+  })
+  setTimeout(function(){ animation.play(); }, 4400);
+  setTimeout(function(){ animationupper.play(); }, 8100);
