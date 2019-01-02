@@ -29,8 +29,12 @@ router.get("/events", (req, res)=>{
   res.render("events")
 });
 
-router.get("/sponsors", (req, res)=>{
+router.get("/sponsors2k18", (req, res)=>{
   res.render("sponsors");
+});
+
+router.get("/sponsors", (req, res)=>{
+  res.render("sponsorsnew");
 });
 
 router.get("/user", (req, res)=>{

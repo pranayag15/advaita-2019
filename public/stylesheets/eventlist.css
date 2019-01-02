@@ -27,14 +27,14 @@ body{
 {
     z-index:999;
     position: absolute;
-    top:30%;
+    top:15%;
     left:5%;
     color:white;
     font-size:2vh;
 }
 .event-nav li
 {
-    padding-top:2vh;
+    padding-top:0.5vh;
     color:white;
 }
 a{

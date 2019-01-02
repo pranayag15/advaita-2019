@@ -15,6 +15,7 @@ body {
 	/*background: radial-gradient(ellipse at center, rgba(49,16,47,1) 0%, rgba(40,11,41,1) 100%);*/
     margin: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 #particles-js {
   position: absolute;
@@ -94,7 +95,7 @@ body {
   position: absolute;
   bottom: 50%;
   left: 50%;
-  max-width: 100px;
+  max-width: 125px;
   opacity: 1;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -107,7 +108,7 @@ body {
 }
 .snip1344 h3 span {
   display: block;
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: darkcyan;
   opacity: 0.75;
 }
@@ -126,6 +127,9 @@ body {
   opacity: 1;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
+}
+.icons {
+  margin-top: -10%;
 }
 .snip1344:hover .background,
 .snip1344.hover .background {

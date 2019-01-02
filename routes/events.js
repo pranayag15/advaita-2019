@@ -22,7 +22,7 @@ router.get("/details/:id", (req, res)=>{
             if(err){
                 console.log(err);
             } else {
-                    // console.log(event);
+                    // console.log(event.description);
                     // res.json(event);
                     res.render("details", {details: event});
             }

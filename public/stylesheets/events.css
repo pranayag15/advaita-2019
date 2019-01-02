@@ -4,6 +4,8 @@
   font-family: carnival-font;
 }
 body {
+  /*position:absolute;*/
+  overflow-x: hidden;
   background-color: #fff;
   overflow-y:hidden;
   background-color:black;
@@ -47,9 +49,11 @@ body {
 }
 .cato {
   position: absolute;
+  /*left:40%;*/
+  text-align:center;
   font-family:carnival-font; 
   color: white;
-  font-size: 90px;
+  font-size: 6vh;
   font-style: italic;
   width:100%;
   text-align:center;
@@ -396,6 +400,13 @@ Animation keyframes
 
 
 @media (max-width: 640px) {
+  body {
+  position:absolute;
+  overflow-x: hidden;
+  background-color: #fff;
+  overflow-y:hidden;
+  background-color:black;
+}
   nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -405,30 +416,46 @@ Animation keyframes
   }
   nav ul li {
     position:absolute;
-    height: 100%;
-    width:95%;
+    height: 95%;
+    width:93%;
+    
   }
   #a
   {
     /*position:absolute;*/
     top:0;
+    border-style:solid;
+    border-width: 0.5vh;
+    border-color:orange;
   }
   #b
   {
     /*position: absolute;*/
     top:100%;
+    border-style:solid;
+    border-width: 0.5vh;
+    border-color:orange;
   }
-  #c
+  #h
   {
     top:200%;
+    border-style:solid;
+    border-width: 0.5vh;
+    border-color:orange;
   }
   #d
   {
     top:300%;
+    border-style:solid;
+    border-width: 0.5vh;
+    border-color:orange;
   }
   #e
   {
     top:400%;
+    border-style:solid;
+    border-width: 0.5vh;
+    border-color:orange;
   }
   .overlay-navigation
   {
@@ -453,7 +480,13 @@ Animation keyframes
   .cato
   {
     /*display:none;*/
-    top:5%;
+    position: relative;
+    text-align: center;
+    margin-left: 60%;
+    margin-top: 20%;
+    /*z-index:999;*/
+    /*right:10%;*/
+    /*top:20%;*/
     font-size:6vh;
   }
   .logoheading
