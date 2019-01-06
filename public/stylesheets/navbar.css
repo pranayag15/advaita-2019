@@ -150,4 +150,14 @@
   .overlay{
     width: 100%;
   }
+  .button_container {
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 999;
+  transition: opacity .25s ease;
+}
 }

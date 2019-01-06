@@ -64,8 +64,9 @@ html, body {
 }
 
 #description {
-font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
+font-family: 'Amaranth', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
   color: white;
 }
 
@@ -157,24 +158,4 @@ font-family: 'Quicksand', sans-serif;
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-
-
-@media screen and (max-device-width : 1024px){
- #title {
-  font-family: 'oneday';
-  font-size: 5vh;
-  letter-spacing: 4px;
-  margin-top: 3vh;
-  margin-bottom: 2vh;
-  /*font-style: italic;*/
-  color: whitesmoke;
-  text-transform: uppercase;
-}
-#description {
-font-family: 'Quicksand', sans-serif;
-  font-size: 3vh;
-  color: white;
-}
 }

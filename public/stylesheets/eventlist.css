@@ -133,11 +133,12 @@ box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
+          border-color: darkcyan;
 }
 .raise {
   color: #ffa260;
   /*color: darkcyan;*/
-  --hover: #e5ff60;
+  --hover: darkcyan;
 }
 
 #notch
@@ -222,7 +223,8 @@ box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     left:10%;
     width:20%;
     top:5%;
-    left:65%;
+    left:55%;
+    border-radius:10vh;
     height:5%;
     text-align:center;
     z-index:9999;
@@ -285,17 +287,19 @@ box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
 .event-nav
 {
     top:10%;
-    left:10%;
+    left:5%;
     z-index:999;
     position: absolute;
     /*top:30%;*/
     /*left:2%;*/
-    width:75%;
+    width:60%;
     color:white;
     font-size:2vh;
     overflow-x:hidden;
+    overflow-y:scroll;
 
 }
+
 
 }
 

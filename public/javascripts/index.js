@@ -34,8 +34,8 @@
     autoplay: false,
     path: 'upper.json'
   })
-  setTimeout(function(){ animation.play(); }, 2400);
-  setTimeout(function(){ animationupper.play(); }, 8100);
+  setTimeout(function(){ animation.play(); }, 3400);
+  setTimeout(function(){ animationupper.play(); }, 7800);
   
   var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;

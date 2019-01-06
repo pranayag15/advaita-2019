@@ -57,4 +57,8 @@ router.get("/about-us", (req, res)=>{
   res.render("about");
 });
 
+router.get("/coming", (req, res) => {
+  res.render("coming");
+})
+
 module.exports = router;

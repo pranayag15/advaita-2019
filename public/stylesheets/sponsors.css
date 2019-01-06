@@ -7,6 +7,40 @@
     padding:0;
     margin:0;
 }
+/*        .offset:hover,*/
+/*.offset:focus {*/
+/*  box-shadow: inset 11.5em 0 0 0 var(--hover);*/
+/*}*/
+/*.offset {*/
+/*  color: #19bc8b;*/
+/*  --hover: #0d2a26;*/
+/*}*/
+button {
+    position:fixed;
+    z-index:99;
+  background: none;
+  border: 2px solid;
+  color:#19bc8b;
+  font: inherit;
+  line-height: 1;
+  /*margin: 0.5em;*/
+  top:4%;
+  right:7%;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+#lastyear:hover{
+    background-color:#0d2a26;
+}
+#lastyear{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#align {
+    position: absolute;
+    top: 4%;
+    right: 10%;
+}
 body{
     /*position:absolute;*/
     /*height:100%;*/
@@ -19,7 +53,6 @@ body{
     background-color:black;
 }
 canvas {
-/*     position:absolute; */
     z-index:-999;
     position: fixed;
     filter:brightness(40%);
@@ -63,5 +96,36 @@ h1
       font-size:4vh;
       /*margin-left:-10%;*/
   }
-
+  button {
+    position:absolute;
+    z-index:99;
+  background: none;
+  border: 2px solid;
+  color:#19bc8b;
+  font: inherit;
+  line-height: 1;
+  font-size:2vh;
+  /*margin: 0.5em;*/
+  top:15%;
+  right:4%;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.heading{
+    font-family: bavro;
+    letter-spacing: 10px;
+    color: white;
+    font-size: 5vh;
+    /*left: 38%;*/
+    text-align: center;
+    margin-top: 1%;
+}
+.logoheading {
+  position: fixed ;
+  height: 10vh ;
+  width: 15vh ;
+  top:0;
+  left:0;
+  z-index: 100;
+}
 }
