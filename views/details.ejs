@@ -10,6 +10,7 @@
 //         if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
 //         document.onmousedown = rtclickcheck;
 // </script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/stylesheets/details.css">
     <link rel="stylesheet" href="/stylesheets/navbar.css">
@@ -34,17 +35,16 @@
                         <p id="title"><%= details.name %></p>
                     </div>
                 </div>
-                <div class="ui one column left floated left grid">
-                    <!--<div class="column">-->
-                    <!--    <div id="prize"> <p>Prizes Worth</p></div>-->
-                    <!--   <div> <span id="symbol">₹ </span> <span id="amount">20K</span></div>-->
-                    <!--</div>-->
-                </div>
+                <!--<div class="ui one column left floated left grid">-->
+                <!--    <div class="column">-->
+                <!--        <div id="prize"> <p>Prizes Worth</p></div>-->
+                <!--       <div> <span id="symbol">₹ </span> <span id="amount"><%= details.price %>K</span></div>-->
+                <!--    </div>-->
+                <!--</div>-->
                 <div class="ui column left floated left stackable grid">
-                    <div class="twelve wide column">
+                    <div class="sixteen wide column">
                         <!--<p id="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>-->
                         <p id="description"><%- details.description %> </p> 
-                         
                     </div>
                 </div>
             </div>

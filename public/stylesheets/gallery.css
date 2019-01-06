@@ -2,6 +2,36 @@
   src: url("../fonts/Carnevalee\ Freakshow.ttf");
   font-family: carnival-font;
 }
+@font-face{
+  src: url("../fonts/SIMPLIFICA.ttf");
+  font-family: simplifica;
+}
+@font-face{
+  src: url("../fonts/Audrey-Normal.otf") format("opentype");
+  font-family: audrey;
+}
+@font-face{
+  src: url("../fonts/Bavro-Regular.ttf");
+  font-family: bavro;
+}
+
+@font-face{
+  src:  url('https://fonts.googleapis.com/css?family=Lato');
+  font-family: raleway;
+}
+@font-face{
+  src: url("../fonts/Prime\ Regular.otf") format("opentype");
+  font-family: prime;
+}
+@font-face{
+  src: url("../fonts/Reckoner.ttf");
+  font-family: reckoner;
+}
+@font-face{
+  src: url("../fonts/Decurion\ Inline.otf") format("opentype");
+  font-family: decurion;
+}
+
 body {
   background: #000000;
   color: white;
@@ -12,13 +42,13 @@ body {
 }
 
 .heading {
-  /* font-family: 'Comfortaa', cursive; */
-  font-family: carnival-font;
+   font-family: 'bavro'; 
+  /*font-family: 'Acme', sans-serif;*/
+  text-transform: uppercase;
   color: #ffffff;
   font-size: 90px;
-  font-style: italic;
-  letter-spacing: 4px;
-  width: 100%;
+  /*font-style: italic;*/
+  letter-spacing: 10px;
   margin-top: 5px;
   margin-bottom: 40px;
 }
@@ -181,7 +211,7 @@ body {
   border-radius: 50%;
   /*background: rgba(255, 255, 255, 0.07);*/
   background: darkcyan;
-  opacity: 0.7
+  opacity: 0.7;
   transition: all .25s ease-out;
 }
 .m-p-g__btn:hover {
@@ -213,12 +243,36 @@ body {
     min-width: 0;
     font-size: 14px;
   }
+  .logoheading {
+  position: fixed;
+  height: 10vh;
+  width: 15vh;
+  margin-top: -8.5% ;
+  margin-left: -50%;
+  z-index:49;
+}
+.heading {
+  /* font-family: 'Comfortaa', cursive; */
+  font-family: carnival-font;
+  color: #ffffff;
+  font-size: 7vh;
+  margin-top: 6%;
+  font-style: italic;
+  letter-spacing: 4px;
+  /*width: 100%;*/
+  /*margin-top: 5px;*/
+  margin-bottom: 2vh;
+}
 }
 canvas {
 /*     position:absolute; */
     z-index:-999;
-    position: absolute;
+    position: fixed;
     filter:brightness(40%);
     top: 0;
     left: 0;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

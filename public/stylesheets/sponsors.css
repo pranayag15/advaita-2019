@@ -1,3 +1,7 @@
+@font-face{
+  src: url("../fonts/Bavro-Regular.ttf");
+  font-family: bavro;
+}
 *
 {
     padding:0;
@@ -17,11 +21,14 @@ body{
 canvas {
 /*     position:absolute; */
     z-index:-999;
-    position: absolute;
+    position: fixed;
     filter:brightness(40%);
     top: 0;
     left: 0;
     height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .logoheading {
   position: fixed ;
@@ -30,6 +37,15 @@ canvas {
   top:0;
   left:0;
   z-index: 100;
+}
+.heading{
+    font-family: bavro;
+    letter-spacing: 10px;
+    color: white;
+    font-size: 8vh;
+    /*left: 38%;*/
+    text-align: center;
+    margin-top: -10%;
 }
 h1
 {

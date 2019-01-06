@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/stylesheets/eventlist.css">
 	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -9,43 +10,77 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+<body style="background-image: url(/images/bacground/fats.jpeg);" >
       <a href="/main"><img class="logoheading" src="/images/advaita.png"></a>
     <% include navbar %>
     <div>
         <ul type="none" class="event-nav desktop" id="menu">
-            <!--<li class="active"><a href="#" id="event1" onclick="iframeSRC('5c12131e3c2539033aaa2f11')">NUKKAD</a></li>-->
-            <!--<li><a href="#" id="event2" onclick="iframeSRC('5c12131a3c2539033aaa2f0e')">ACOUSTICA</a></li>-->
-            <!--<li><a href="#" id="event3" onclick="iframeSRC('5c12131c3c2539033aaa2f0f')">ROCKATHON</a></li>-->
-            <!--<li><a href="#" id="event4" onclick="iframeSRC('5c12131c3c2539033aaa2f10')">CYPHER</a></li>-->
-            <li><button class="raise active"  onclick="iframeSRC('5c12131e3c2539033aaa2f11')" ><a href="#" id="event4">NUKKAD</a></button></li>
-            <li><button class="raise"  onclick="iframeSRC('5c12131a3c2539033aaa2f0e')" ><a href="#" id="event4">ACOUSTICA</a></button></li>
-            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f0f')" ><a href="#" id="event4">ROCKATHON</a></button></li>
-            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f10')" ><a href="#" id="event4">CYPHER</a></button></li>
+            <li><button class="raise active"  onclick="iframeSRC('5c31ec8327bbed006e9aab9d')" ><a href="#" id="event4">pradarshn</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c31ec8427bbed006e9aab9f')" ><a href="#" id="event4">Haq se rj</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c31ec8427bbed006e9aab9e')" ><a href="#" id="event4">mera naam joker</a></button></li>
+            <!--<li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5caa')" ><a href="#" id="event4">LA MODE</a></button></li>-->
+            <!--<li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5cab')" ><a href="#" id="event4">CYPHER</a></button></li>-->
+            <!--<li><button class="raise"  onclick="iframeSRC('5c2b998a8082f7006a6f5cac')" ><a href="#" id="event4">TILL I COLLAPSE</a></button></li>-->
         </ul>
     </div>
     
+    <!--<div>-->
+    <!--    <ul type="none" class="event-nav1 desktop" id="menu">-->
+    <!--        <li><button class="raise active"  onclick="iframeSRC('5c2b99848082f7006a6f5ca7')" ><a href="#" id="event4">ROCKATHON</a></button></li>-->
+    <!--        <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca8')" ><a href="#" id="event4">ACOUSTICA</a></button></li>-->
+    <!--        <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca9')" ><a href="#" id="event4">FOOTLOOSE</a></button></li>-->
+    <!--        <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5caa')" ><a href="#" id="event4">LA MODE</a></button></li>-->
+    <!--        <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5cab')" ><a href="#" id="event4">CYPHER</a></button></li>-->
+    <!--        <li><button class="raise"  onclick="iframeSRC('5c2b998a8082f7006a6f5cac')" ><a href="#" id="event4">TILL I COLLAPSE</a></button></li>-->
+    <!--    </ul>-->
+    <!--</div>-->
+    
     <div class="body1">
-        <iframe id="framy" height="100%" width="100%" src="/details/5c12131e3c2539033aaa2f11"></iframe>
+        <iframe id="framy" height="100%" width="100%" src="/details/5c31ec8327bbed006e9aab9d"></iframe>
     </div>
     <div class="back" ></div>
     <div id="notch" onclick="notchToggel()">
-        Menu
+        Events
     </div>
-    <div id="notch-menu" ></div>
+    <div id="notch-menu" >
         <ul type="none" class="event-nav" id="mobile">
-            <!--<li class="active"><a href="#" id="event1" onclick="iframeSRC('5c12131e3c2539033aaa2f11')">NUKKAD</a></li>-->
-            <!--<li><a href="#" id="event2" onclick="iframeSRC('5c12131a3c2539033aaa2f0e')">ACOUSTICA</a></li>-->
-            <!--<li><a href="#" id="event3" onclick="iframeSRC('5c12131c3c2539033aaa2f0f')">ROCKATHON</a></li>-->
-            <!--<li><a href="#" id="event4" onclick="iframeSRC('5c12131c3c2539033aaa2f10')">CYPHER</a></li>-->
-            <li><button class="raise active"  onclick="iframeSRC('5c12131e3c2539033aaa2f11') ; mobile() " ><a href="#" id="event4">NUKKAD</a></button></li>
-            <li><button class="raise"  onclick="iframeSRC('5c12131a3c2539033aaa2f0e') ; mobile()" ><a href="#" id="event4">ACOUSTICA</a></button></li>
-            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f0f') ; mobile()" ><a href="#" id="event4">ROCKATHON</a></button></li>
-            <li><button class="raise"  onclick="iframeSRC('5c12131c3c2539033aaa2f10') ; mobile()" ><a href="#" id="event4">CYPHER</a></button></li>
+             <li><button class="raise active"  onclick="iframeSRC('5c2b99848082f7006a6f5ca7') ; mobile()" ><a href="#" id="event4">ROCKATHON</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca8') ; mobile()" ><a href="#" id="event4">ACOUSTICA</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca9') ; mobile()" ><a href="#" id="event4">FOOTLOOSE</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5caa') ; mobile()" ><a href="#" id="event4">LA MODE</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5cab') ; mobile()" ><a href="#" id="event4">CYPHER</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b998a8082f7006a6f5cac') ; mobile()" ><a href="#" id="event4">TILL I COLLAPSE</a></button></li>
+            <li><button class="raise active"  onclick="iframeSRC('5c2b99848082f7006a6f5ca7') ; mobile()" ><a href="#" id="event4">ROCKATHON</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca8') ; mobile()" ><a href="#" id="event4">ACOUSTICA</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca9') ; mobile()" ><a href="#" id="event4">FOOTLOOSE</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5caa') ; mobile()" ><a href="#" id="event4">LA MODE</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5cab') ; mobile()" ><a href="#" id="event4">CYPHER</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2b998a8082f7006a6f5cac') ; mobile()" ><a href="#" id="event4">TILL I COLLAPSE</a></button></li>
         </ul>
-        <button id="close" onclick="close1()" >Close</button>
+    </div>
+
+<button id="close" class="fa fa-close" onclick="close2()"style="border-radius: 50vh; width:8vh" ></button>
+        
+    <!--<div id="notch1" onclick="notchToggel1()">-->
+    <!--    Menu-->
+    <!--</div>    -->
+     <!--<div id="notch-menu1" ></div>-->
+     <!--   <ul type="none" class="event-nav1" id="mobile1">-->
+     <!--        <li><button class="raise active"  onclick="iframeSRC('5c2b99848082f7006a6f5ca7') ; mobile1()" ><a href="#" id="event4">ROCKATHON</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca8') ; mobile1()" ><a href="#" id="event4">ACOUSTICA</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca9') ; mobile1()" ><a href="#" id="event4">FOOTLOOSE</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5caa') ; mobile1()" ><a href="#" id="event4">LA MODE</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5cab') ; mobile1()" ><a href="#" id="event4">CYPHER</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b998a8082f7006a6f5cac') ; mobile1()" ><a href="#" id="event4">TILL I COLLAPSE</a></button></li>-->
+     <!--   </ul>-->
+     <!--   <button id="close1" onclick="close1()" >Close</button>-->
+        
+        
+        
+        
     <script>
         // var header = document.getElementById("myDIV");
+        var i=0;
 var btns = document.getElementsByClassName("raise");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
@@ -61,7 +96,13 @@ for (var i = 0; i < btns.length; i++) {
             document.getElementById("mobile").style.display = "block";
             document.getElementById("close").style.display = "block";
         };
-        
+        function notchToggel1()
+        {
+            document.getElementById("notch1").style.display = "none";
+            document.getElementById("notch-menu1").style.display = "block";
+            document.getElementById("mobile1").style.display = "block";
+            document.getElementById("close1").style.display = "block";
+        };
         function iframeSRC(x){
             // alert("done");
             // console.log(document.getElementById("framy").src);
@@ -76,14 +117,51 @@ for (var i = 0; i < btns.length; i++) {
             document.getElementById("mobile").style.display = "none";
             document.getElementById("close").style.display = "none";
         };
-        function close1()
+        function mobile1()
+        {
+            document.getElementById("notch1").style.display = "block";
+            document.getElementById("notch-menu1").style.display = "none";
+            document.getElementById("mobile1").style.display = "none";
+            document.getElementById("close1").style.display = "none";
+        };
+        function close2()
         {
             document.getElementById("notch").style.display = "block";
             document.getElementById("notch-menu").style.display = "none";
             document.getElementById("mobile").style.display = "none";
             document.getElementById("close").style.display = "none";
         }
-        
+        function close1()
+        {
+            document.getElementById("notch1").style.display = "block";
+            document.getElementById("notch-menu1").style.display = "none";
+            document.getElementById("mobile1").style.display = "none";
+            document.getElementById("close1").style.display = "none";
+        }
+                function hidenav()
+        {
+           var width=$(window).width();
+            // document.getElementById("notch1").style.display = "block";
+            if(i%2==0 && width>480)
+            {
+                var btns = document.getElementsByClassName("event-nav1");
+for (var j = 0; j < btns.length; j++) {
+  var current = document.getElementsByClassName("event-nav1");
+  current[0].style.display = "none";
+  }
+}
+            
+            else if(i%2!=0 && width>480)
+            {
+                var btns = document.getElementsByClassName("event-nav1");
+for (var j = 0; j < btns.length; j++) {
+  var current = document.getElementsByClassName("event-nav1");
+  current[0].style.display = "block";
+  }
+            }
+            i=i+1;
+            
+        }
         $(document).ready(function(){
             console.log("yes");
         });

@@ -53,4 +53,8 @@ router.get("/team", (req, res)=>{
   res.render("team");
 });
 
+router.get("/about-us", (req, res)=>{
+  res.render("about");
+});
+
 module.exports = router;

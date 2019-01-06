@@ -93,3 +93,28 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+function iframe()
+{
+   document.getElementById("iframe").style.display = "block";
+   document.getElementById("close12").style.display = "block";
+   document.getElementById("notification").style.display = "none";
+    // document.getElementById("youtube").style.font-size = "4vh";
+}
+function notification()
+{
+   document.getElementById("notification").style.display = "block";
+   document.getElementById("close12").style.display = "block";
+    document.getElementById("iframe").style.display = "none";
+}
+
+function close12()
+{
+   document.getElementById("iframe").style.display = "none";
+    document.getElementById("notification").style.display = "none";
+    document.getElementById("close12").style.display = "none";
+}
+
+$('#close12').on('click', function() {
+    //$('#popup-youtube-player').stopVideo();
+$('#iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');    
+});

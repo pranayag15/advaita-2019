@@ -6,7 +6,28 @@
   src: url("../fonts/calendas_plus-webfont.ttf");
   font-family: calendar;
 }
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@font-face {
+  src: url("../fonts/Reckoner.ttf");
+  font-family: reckoner;
+}
+@font-face{
+  src: url("../fonts/DenverRegular.ttf");
+  font-family: denver;
+}
+@font-face{
+  src: url("../fonts/Modeka.otf") format("opentype");
+  font-family: modeka;
+}
+@font-face{
+  src: url("../fonts/ONEDAY.ttf");
+  font-family: oneday;
+}
+@font-face{
+  src: url("../fonts/Prime\ Regular.otf") format("opentype");
+  font-family: prime;
+}
+/*@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');*/
+
 /* font-family: 'Lobster', cursive;
 font-family: 'Varela Round', sans-serif; */
 
@@ -43,18 +64,18 @@ html, body {
 }
 
 #description {
-  font-family: cutive;
-  font-size: 18px;
+font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
   color: white;
 }
 
 #title {
-  font-family: calendar;
-  font-size: 50px;
-  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  font-size: 5rem;
+  letter-spacing: 4px;
   margin-top: 3vh;
   margin-bottom: 2vh;
-  font-style: italic;
+  /*font-style: italic;*/
   color: whitesmoke;
   text-transform: uppercase;
 }
@@ -136,4 +157,24 @@ html, body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+
+
+@media screen and (max-device-width : 1024px){
+ #title {
+  font-family: 'oneday';
+  font-size: 5vh;
+  letter-spacing: 4px;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  /*font-style: italic;*/
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+#description {
+font-family: 'Quicksand', sans-serif;
+  font-size: 3vh;
+  color: white;
+}
 }

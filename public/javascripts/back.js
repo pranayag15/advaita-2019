@@ -83,8 +83,8 @@ function onWindowResize(e) {
 function onCanvasClick(e) {
     context.save();
     context.globalAlpha = 0.8;
-    context.fillStyle = Configs.backgroundColor;
-    context.fillRect(0, 0, screenWidth, screenHeight);
+    // context.fillStyle = Configs.backgroundColor;
+    // context.fillRect(0, 0, screenWidth, screenHeight);
     context.restore();
     
     simplexNoise = new SimplexNoise();

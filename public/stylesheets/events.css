@@ -3,6 +3,22 @@
   src: url("../fonts/Carnevalee\ Freakshow.ttf");
   font-family: carnival-font;
 }
+@font-face{
+  src: url("../fonts/ONEDAY.ttf");
+  font-family: oneday;
+}
+@font-face{
+  src: url("../fonts/DenverRegular.ttf");
+  font-family: denver;
+}
+@font-face{
+  src: url("../fonts/Modeka.otf") format("opentype");
+  font-family: modeka;
+}
+@font-face{
+  src: url("../fonts/Bavro-Regular.ttf");
+  font-family: bavro;
+}
 body {
   /*position:absolute;*/
   overflow-x: hidden;
@@ -21,6 +37,9 @@ body {
   margin-top: -1.5% ;
   margin-left: 0%;
   z-index: 100;
+}
+.logoheading:hover{
+  filter: brightness(110%);
 }
 .responsive-nav
 {
@@ -50,17 +69,16 @@ body {
 .cato {
   position: absolute;
   /*left:40%;*/
+  text-transform: uppercase;
   text-align:center;
-  font-family:carnival-font; 
+  font-family:bavro; 
   color: white;
-  font-size: 6vh;
-  font-style: italic;
+  font-size: 8vh;
   width:100%;
   text-align:center;
   text-decoration: none;
-  /*text-transform: uppercase;*/
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 10px;
 }
 .back
 {
@@ -120,8 +138,8 @@ nav ul li {
   -webkit-flex-basis: 18%;
   -ms-flex-preferred-size: 18%;
   flex-basis: 18%;
-  margin-right:2%;
-  margin-left:2%;
+  margin-right:1%;
+  margin-left:1%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -141,13 +159,14 @@ nav li a {
   top: 46%;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Work sans', sans-serif;
-  font-weight: 300;
+  /*font-family: 'Work sans', sans-serif;*/
+  font-family: 'modeka';
+  font-weight: 600;
   letter-spacing: 4px;
   text-decoration: none;
   display: block;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   opacity: 0;
 }
 
@@ -170,7 +189,7 @@ nav li a:before {
 
 nav li a:after {
   content: attr(data-content);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   opacity: 0;
@@ -185,7 +204,7 @@ nav li a:after {
   bottom: -50px;
   text-transform: none;
   font-family: 'Open sans', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: italic;
   letter-spacing: 0;
 }
@@ -482,8 +501,8 @@ Animation keyframes
     /*display:none;*/
     position: relative;
     text-align: center;
-    margin-left: 60%;
-    margin-top: 20%;
+    margin-left: 10%;
+    margin-top: 15%;
     /*z-index:999;*/
     /*right:10%;*/
     /*top:20%;*/
@@ -498,8 +517,12 @@ Animation keyframes
 canvas {
 /*     position:absolute; */
     z-index:-999;
-    position: absolute;
+    position: fixed;
     filter:brightness(40%);
     top: 0;
     left: 0;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

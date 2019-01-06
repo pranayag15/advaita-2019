@@ -1,3 +1,7 @@
+@font-face{
+  src: url("../fonts/Bavro-Regular.ttf");
+  font-family: bavro;
+}
 body
 {
     overflow-x:hidden;
@@ -12,8 +16,9 @@ body
 .contact{
     padding: 5%;
     text-align: center;
-    font-family: 'Cormorant', serif;
-    font-size: 60px;
+    font-family: 'bavro', serif;
+    font-size: 8vh;
+    letter-spacing: 10px;
 }
 .logoheading {
   position: absolute;
@@ -38,8 +43,25 @@ body
 canvas {
 /*     position:absolute; */
     z-index:-999;
-    position: absolute;
+    position: fixed;
     filter:brightness(40%);
     top: 0;
     left: 0;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    
+} 
+a:hover{
+    color: darkcyan;
+    text-decoration: none;
+}
+h4{
+    color: darkcyan;
 }
