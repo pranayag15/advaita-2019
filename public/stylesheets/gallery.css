@@ -43,14 +43,13 @@ body {
 
 .heading {
    font-family: 'bavro'; 
-  /*font-family: 'Acme', sans-serif;*/
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 90px;
-  /*font-style: italic;*/
+  font-size: 85px;
   letter-spacing: 10px;
   margin-top: 5px;
   margin-bottom: 40px;
+  font-weight: 600;
 }
 .logoheading {
   position: fixed;
@@ -253,11 +252,9 @@ body {
 }
 .heading {
   /* font-family: 'Comfortaa', cursive; */
-  font-family: carnival-font;
   color: #ffffff;
   font-size: 7vh;
   margin-top: 6%;
-  font-style: italic;
   letter-spacing: 4px;
   /*width: 100%;*/
   /*margin-top: 5px;*/

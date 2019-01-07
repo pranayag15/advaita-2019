@@ -61,7 +61,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use('/', authRouter);
+// app.use('/', authRouter);
 app.use('/', eventsRouter);
 // app.use('/users', usersRouter);
 

@@ -34,13 +34,26 @@ body{
     position:absolute;
     height: 100%;
     width:100%;
+    top:0;
+    left:0;
     overflow-y: hidden;
     background-color: black;
     /*background-image:url(https://images.unsplash.com/photo-1515550962725-a254324472e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);*/
     background-size:cover;
     background-repeat:no-repeat;
-    background-position:left;
+    /*background-position:left;*/
     overflow: hidden;
+}
+
+.categoryhead{
+    position: fixed;
+    font-family: 'Quicksand', cursive;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .logoheading {
@@ -116,6 +129,7 @@ box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     height:100%;
     width:100%;
     opacity:0.6;
+    z-index: -1;
 }
 .raise{
   background: none;
@@ -150,13 +164,14 @@ box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
  font-size:2.5vh;
  top:48%;
  left:5vh;
- background-color:black;
+ background-color:darkcyan;
  padding:2vh;
  color:white;
  transform: rotate(90deg);
 	transform-origin: left top 0;
 	float: left;
 	display:none;
+	text-transform: uppercase;
 }
 #notch1
 {
@@ -292,7 +307,7 @@ box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     position: absolute;
     /*top:30%;*/
     /*left:2%;*/
-    width:60%;
+    width:70%;
     color:white;
     font-size:2vh;
     overflow-x:hidden;
@@ -300,7 +315,11 @@ box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
 
 }
 
-
+.logoheading
+{
+    height:10vh;
+    width:15vh;
+}
 }
 
 canvas {

@@ -9,6 +9,9 @@
       src: url("../fonts/SIMPLIFICA.ttf");
       font-family: simplifica;
   }
+  body{
+                overflow-x: hidden;
+  }
       p{
           position: absolute;
             font-family: 'simplifica';
@@ -17,7 +20,14 @@
             letter-spacing: 31px;
             text-transform: uppercase;
             top: 31%;
-            left: 20%;
+            text-align: center;
+            width: 100%;
+      }
+      @media (max-width: 640px)
+      {
+        p{
+              font-size: 3rem;
+        }
       }
   </style>
 </head>

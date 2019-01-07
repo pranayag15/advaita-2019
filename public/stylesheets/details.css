@@ -33,12 +33,13 @@ font-family: 'Varela Round', sans-serif; */
 
 html, body {
   height: 100%;
-  width: 95%;
+  width: 100%;
   padding: 0;
   margin: 0;
   /* display: flex; */
   justify-content: center;
   align-items: center;
+  overflow-x:hidden;
  }
 
 #bg {
@@ -158,4 +159,22 @@ font-family: 'Amaranth', sans-serif;
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@media (max-width: 640px)
+{
+  #title
+  {
+    font-size:6vh;
+  }
+  html, body {
+  height: 100%;
+  width: 95%;
+  padding: 0;
+  margin: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  overflow-x:hidden;
+ }
 }

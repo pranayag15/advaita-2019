@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>ADVAITA-IIITBH</title>
 	    <link rel="stylesheet" href="/stylesheets/navbar.css">
+	    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+<!--<link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/>-->
+
+	    <!--<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=12"></script>-->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link rel="stylesheet" href="/stylesheets/loading.css">
 <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Pacifico|Ubuntu+Mono|Amaranth" rel="stylesheet">
 	        <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
 
@@ -26,9 +32,17 @@
 </head>
 <body>
 	<% include navbar %>
+	<% include loading %>
 	<!-- background layer 1 -->
 	<!-- <div class="background"> -->
-
+	<!--<div id="content-container">-->
+	<!--	<audio id="music" >-->
+	<!--	 <source src="/images/fin.mp3" type="audio/mpeg">-->
+	<!--	</audio>-->
+	<!--	 <button id="play-music-button" class="pause"></button>-->
+	<!--	</div>-->
+<iframe src="images/fin.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
 			<div id="d1"><div id="d2"><div id="d3"></div></div></div>
 
 			</div>
@@ -52,8 +66,8 @@
 	<div id="anilogo" class="anilogo"  ></div>
 	</div>
 	
-	<i onclick="iframe()" class="fa fa-youtube-play youtube" style="color:red"></i>
-	<i onclick="notification()" class="fa fa-bell notification"><span class="notification1">1</span></i>
+	<i onclick="iframe()" class=" youtube" style="color:red; "><img height="30vh" width="32vh" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-512.png">	</i>
+	<!--<i onclick="notification()" class="fa fa-bell notification"><span class="notification1">1</span></i>-->
 	<!--<div class="IIIT">IIIT BHUBANESWAR PRESENTS</div>-->
 	<!--<div class="date">7 Feb - 10 Feb</div>-->
 	<a onclick="close12()" class="fa fa-close" id="close12"></a>
@@ -61,13 +75,17 @@
 	<h1
      class="txt-rotate"
      data-period="1000"
-     data-rotate='[ "IIIT BHUBANESWAR PRESENTS", "Techno Cult Fest", "More than 50 Events." , "7 Feb - 10 Feb"]'>
+     data-rotate='[ "IIIT BHUBANESWAR PRESENTS", "The Annual Techno-Cult Fest", "50+ Events" , "7th Feb - 10th Feb"]'>
     </h1>
 </div>
     <iframe id="iframe" class="iframe12" src="https://www.youtube.com/embed/videoseries?list=UUkULTsUj0_Ukm9DWOtin5yw&enablejsapi=1" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
 </iframe>
 <div id="notification">
-	
+	</br></br></br>
+	<ul type="bullet">
+		<li style="color:white" >REGISTRATION STARTING SOON</li>
+	</ul>
+      <!--<b style="color:orange"  class="note">REGISTRATION STARTING SOON</b>-->
 </div>
 	<!--<img class="logo" src="/images/advaita.png">-->
 	<div id="logo" ></div>
@@ -85,6 +103,7 @@
 
 <!-- Javascript links -->
 <script src="/javascripts/bodymovin.js"></script>
+<script src="/javascripts/loading.js"></script>
 <script src="/javascripts/index.js"></script>
 <script src="/javascripts/menu.js"></script>
 </body>

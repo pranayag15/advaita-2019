@@ -2,6 +2,10 @@
   src: url("../fonts/Bavro-Regular.ttf");
   font-family: bavro;
 }
+@font-face{
+  src: url("../fonts/ONEDAY.ttf");
+  font-family: oneday;
+}
 *
 {
     padding:0;
@@ -75,10 +79,11 @@ canvas {
     font-family: bavro;
     letter-spacing: 10px;
     color: white;
-    font-size: 8vh;
+    font-size: 85px;
     /*left: 38%;*/
     text-align: center;
-    margin-top: -10%;
+    margin-top: -12%;
+    font-weight: 600;
 }
 h1
 {

@@ -118,3 +118,44 @@ $('#close12').on('click', function() {
     //$('#popup-youtube-player').stopVideo();
 $('#iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');    
 });
+var load123 = 0;
+$(window).ready(function(){
+  load1();
+  // myFunction();
+});
+          function load1()
+          {
+          if(load123 == 2){
+           $('#loading').fadeOut('slow',function(){$(this).remove();});
+          }
+           load123 = load123 + 1;
+          }
+      
+        setInterval(load1,1000);
+       
+//       $(document).ready(function() {
+//   var music = document.getElementById("music");
+ 
+//   var play_music_button = document.getElementById("play-music-button");
+
+//   function playAudio() {
+//     if (music.paused) {
+//       music.play();
+//       play_music_button.className = 'pause';
+//     } else {
+//       music.pause();
+//       play_music_button.className = 'play';
+//     }
+//     music.addEventListener('ended',function() {
+//       play_music_button.className = 'play';
+//     });
+//   }
+//   play_music_button.addEventListener("click", playAudio);
+// });
+
+
+// window.onload = function()
+// {
+//   console.log( $("#music").get(0))
+//   $("#music").get(0).play();
+// }

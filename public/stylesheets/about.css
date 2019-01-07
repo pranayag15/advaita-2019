@@ -3,10 +3,14 @@
   margin: 0 auto;
   padding: 0;
 }
+@font-face{
+  src: url("../fonts/Bavro-Regular.ttf");
+  font-family: bavro;
+}
 
 body {
-  background: url("https://image.ibb.co/mJ9tLa/image.png");
-  background-color: #212121;
+  /*background: url("https://image.ibb.co/mJ9tLa/image.png");*/
+  background-color: #000;
   background-blend-mode: overlay;
   background-position: center;
   background-size: cover;
@@ -25,13 +29,24 @@ canvas {
     background-repeat: no-repeat;
 }
 
+.logoheading {
+  position: fixed;
+  height: 18vh;
+  width: 25vh;
+  margin-top: -4.5% ;
+  margin-left: -50%;
+  z-index:49;
+}
+
 h1 {
   color: whitesmoke;
-  font-family: 'Exo 2', sans-serif;
-  font-size: 46px;
-  font-weight: 900;
+  text-align:center;
+  font-family: 'bavro';
+  font-size: 85px;
+  font-weight: 600;
   text-transform: uppercase;
   margin-top: 1%;
+  letter-spacing: 10px;
 }
 
 p {
@@ -39,12 +54,33 @@ p {
   min-height: 80px;
   padding: 0;
   color: whitesmoke;
-  font-family: OpenSans;
-  font-size: 17px;
+  font-family: 'Amaranth', sans-serif;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 22px;
+  /*line-height: 22px;*/
 }
 img{
     padding-top: 2%;
     padding-bottom: 2%;    
+}
+
+@media (max-width: 640px){
+  .logoheading
+  {
+    top:1%;
+    height:10vh;
+    width:15vh;
+  }
+  h1
+  {
+    margin-top:15%;
+    font-size:6vh;
+    padding-bottom: 3vh;
+    text-align:center;
+    letter-spacing: 1vh;
+  }
+  article
+  {
+    padding:2vh;
+  }
 }

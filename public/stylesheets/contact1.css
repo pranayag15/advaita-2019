@@ -17,8 +17,9 @@ body
     padding: 5%;
     text-align: center;
     font-family: 'bavro', serif;
-    font-size: 8vh;
+    font-size: 85px;
     letter-spacing: 10px;
+    font-weight: 600;
 }
 .logoheading {
   position: absolute;
@@ -64,4 +65,17 @@ a:hover{
 }
 h4{
     color: darkcyan;
+}
+@media (max-width: 640px){
+    .contact
+    {
+        font-size:4vh;
+        margin-top:15%;
+    }
+    .logoheading
+    {
+        top:0;
+        height:10vh;
+        width:15vh;
+    }
 }
