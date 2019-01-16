@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
-var User   = require('../models/register');
 
+var Category  = require("../models/category"),
+    Events    = require("../models/events");
+    User      = require("../models/register");
 
 router.get("/register", (req, res) => {
     var data ={
@@ -23,19 +25,21 @@ router.post("/register", (req, res) => {
     req.checkBody('name2', 'You must have a name').notEmpty();
     req.checkBody('email', 'Email is empty').isEmail().notEmpty();
     req.checkBody('college', 'You must be in college').notEmpty();
+    req.checkBody('gender', 'Specify Gender').notEmpty();
     req.checkBody('city', 'Must not be a vagabond').notEmpty();
     req.checkBody('phone', 'Enter valid phone number').notEmpty();
     req.checkBody('password', 'Enter valid Password').notEmpty();
-    req.checkBody('confirm-password', 'password confirmation fails').notEmpty();
+    req.checkBody('confirm-password', 'password confirmation fails').equals(req.body.password).notEmpty();
 
     var errors = req.validationErrors();
     if(errors){
         req.flash('registrationError', errors);
         console.log(req.flash('registrationError'));
-        res.render("register",{
+        res.render("signup-in",{
             name1: req.body.name1,
             name2: req.body.name2,
             email: req.body.email,
+            gender: req.body.gender,
             college: req.body.college,
             city: req.body.city,
             phone: req.body.phone,
@@ -56,13 +60,14 @@ router.post("/register", (req, res) => {
         });
         User.register(newUser, req.body.password, function(err, user){
             if(err){
-                console.log(err.message);
+                // console.log(err.message);
                 req.flash('existingUsername', "Entered email is already registered");
                 res.render("signup-in",{
                     name1: req.body.name1,
                     name2: req.body.name2,
                     email: req.body.email,
                     college: req.body.college,
+                    gender: req.body.gender,
                     gender: req.body.gender,
                     city: req.body.city,
                     phone: req.body.phone
@@ -77,14 +82,39 @@ router.post("/register", (req, res) => {
     }
 });
 
-// router.get("/login", (req, res)=>{
-//     res.render("login");
-// });
+router.get("/dashboard", (req, res)=>{
+    if(req.user){
+        User.findById(req.user._id).populate("events").exec((err, eve) => {
+         if(err){
+            console.log(err);
+         } else {
+            // console.log(eve);
+            res.render("dashboard", {user: req.user, eventList: eve.events});
+          }
+        });        
+    } else {
+        res.render("dashboard");
+    }
+
+});
+
+router.get("/data", (req, res)=>{
+   User.findById(req.user._id).populate("events").exec((err, eve) => {
+        if(err){
+            console.log(err);
+        } else {
+            // console.log(eve);
+            res.json(eve.events);
+        }
+    }) 
+});
 
 router.post("/login", passport.authenticate('local',
     {
-        successRedirect: '/show/cultural',
-        failureRedirect: "/register"
+        successRedirect: '/events',
+        failureRedirect: "/register",
+        failureFlash: "Incorrect username or password",
+        successFlash: "Welcome to cosmo carnival"
     }), (req, res)=>{
         console.log(req.session);
 });
@@ -92,7 +122,14 @@ router.post("/login", passport.authenticate('local',
 router.get('/logout', (req, res)=>{
     console.log(req.user);
     req.logout();
-    res.redirect("/main");
+    res.redirect("/");
 });
+
+function isLoggedin(req, res, next){
+  if(req.isAuthenticated()){
+      return next();
+  }  
+  res.redirect("/register");
+}
 
 module.exports = router;

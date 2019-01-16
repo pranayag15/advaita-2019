@@ -52,21 +52,31 @@
             </div>
         </div>
         <br>
-        <!-- <div class="gradient-border" id="box">REGISTER</div> -->
-        <!--<%# if(currentUser){ %>-->
-        <!--    <form action="/details/<%=details._id%>" method="post">-->
-        <!--        <button type="submit" class="gradient-border" id="box">REGISTER</button>-->
-        <!--    </form>-->
-        <!--<%# } else { %>-->
-        <!--    <div class="gradient-border" id="box" onclick="myfunc()" >REGISTER</div>-->
-        <!--<%# }%>-->
+         <!--<div class="gradient-border" id="box"></div> -->
+        <% if(currentUser){ %>
+            <form action="/details/<%=details._id%>" method="post">
+                <button type="submit" class="gradient-border" id="box" onclick="return existing()" >REGISTER</button>
+            </form>
+        
+        <% } else { %>
+            <div class="gradient-border" id="box" onclick="myfunc()" >REGISTER</div>
+        <% }%>
     </div>
+    <div id="existingEvent" style="display: none;" ><%= existingEvent[0] %></div>
 <script>
     $(document).ready(function(){
         console.log("yo");
     });
+    var message = document.getElementById("existingEvent").textContent;
     function myfunc(){
         alert("Login first to register");
+    }
+    function existing(){
+        console.log(message);
+        if(message!=""){
+            alert("Event Already Registered");
+            return false;
+        }
     }
 </script>
 </body>

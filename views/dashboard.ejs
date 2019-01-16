@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" media="screen and (min-width: 720px)"  type="text/css" href="/stylesheets/dashboard.css">
+	<link rel="stylesheet" media="screen and (max-width: 720px)" type="text/css" href="/stylesheets/dashboardresponsive.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
+	     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+	      <link rel="stylesheet" href="/stylesheets/navbar.css"> 
+	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
+	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
+</head>
+<body>
+	<!--<div id="large-header" class="large-header">-->
+	    <% include navbar %>
+  <a href="/"><img class="logoheading" src="/images/advaita.png"></a>
+  <canvas id='c'></canvas>
+<!--</div>-->
+	<div class="profile">
+		<img src="https://avatars3.githubusercontent.com/u/33354423?s=460&v=4">
+		<div class="details">
+			<b><%#= user.name %> Sandeep Chutiya</b>
+			<!--<b>Name: Sandeep Chutiya</b>-->
+		</br></br>
+			<b><%#= user.college %>IIIT Bhubaneswar</b>
+		</br></br>
+			<b> <%#= user.phone %>9064507905</b>
+		</br></br>
+<!--			<div class="progressdiv"  data-percent="86">-->
+<!--  <svg class="progress" width="178" height="178" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">-->
+<!--  <circle r="80" cx="89" cy="89" fill="transparent" stroke-dasharray="502.4" stroke-dashoffset="0" ></circle>-->
+<!--  <circle class="bar" r="80" cx="89" cy="89" fill="transparent" stroke-dasharray="502.4" stroke-dashoffset="0"></circle>-->
+<!--</svg></div>-->
+<!--		</br>-->
+<!--		<b class="progressbar">Events registerd By you</b>-->
+		</div>
+
+	</div>
+	<div class="List">
+		<div id="card">
+		<img height="100%"; width="100%" src="hovercop.jpg">
+		<div class="back123"></div>
+		<div class="descriptiion123"></div>
+		<div class="title">Hovercop</div>
+	</div>
+	<!-- <div id="card1"></div> -->
+	
+	<%# eventList.forEach(function(event){ %>
+	<div id="card">
+		<img height="100%"; width="100%" src="hovercop.jpg">
+		<div class="title"><%#= event.name %></div>
+		<div class="title">Chut</div>
+	</div>
+	<%# }) %>
+
+</div>
+	<div class="footer">
+		<a href="/logout" class="Logout">Logout</a>
+		<a href="/events" class="Events">Add Events</a>
+		<a href="#" class="Status">Payment  Status </a>
+	</div>
+	<script type="text/javascript" src="/javascripts/dashboard.js"></script>
+	 <script src="javascripts/back.js"></script>
+	  <script src="/javascripts/menu.js"></script>
+</body>
+</html>

@@ -56,6 +56,17 @@ router.get("/aboutus", (req, res)=>{
 
 router.get("/coming", (req, res) => {
   res.render("coming");
-})
+});
+
+router.get("/sponsorship", (req, res)=>{
+  res.render("sponsorcontact");
+});
+
+function isLoggedin(req, res, next){
+  if(req.isAuthenticated()){
+      return next();
+  }  
+  res.redirect("/register");
+}
 
 module.exports = router;

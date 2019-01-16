@@ -28,21 +28,32 @@ router.get("/details/:id", (req, res)=>{
             }
         });
     })
-// router.post("/details/:id", (req, res)=>{
-//     // console.log(req.user);
-//     User.findOne({username: req.user.username}, (err, user) => {
-//         if(err){
-//             console.log(err);
-//         } else {
-//             // console.log(req.params.id);
-//             user.events.push(req.params.id);
-//             user.save();
-//             console.log(req.user);
-//             // res.redirect("/details/"+req.params.id);
-//             res.redirect("/show/cultural");
-//         }
-//     })
-// });
+router.post("/details/:id", (req, res)=>{
+    // console.log(req.user);
+    User.findOne({username: req.user.username}, (err, user) => {
+        if(err){
+            console.log(err);
+        } else {
+            var result = 0;
+              for(var i=0; i<user.events.length; i++){
+                if(user.events[i]==req.params.id){
+                    result = 1;
+                    break;
+                }
+              }                
+            if(result==0){
+                console.log("not found");   
+                user.events.push(req.params.id);
+                user.save();
+            } else {
+                req.flash('eventRegister', "Already Registered");
+                console.log("found");
+            }
+            res.redirect("/details/"+req.params.id);
+            // console.log(req.user);
+        }
+    })
+});
 
 router.get("/cultural", (req, res)=>{
   res.render("cultural");

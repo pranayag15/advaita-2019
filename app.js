@@ -57,11 +57,14 @@ app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   res.locals.registerError = req.flash('registrationError');
   res.locals.existingUsername = req.flash('existingUsername');
+  res.locals.existingEvent = req.flash('eventRegister');
+  res.locals.loginError = req.flash('error')
+  res.locals.loginSuccess = req.flash('success');
   next();
 });
 
 app.use('/', indexRouter);
-// app.use('/', authRouter);
+app.use('/', authRouter);
 app.use('/', eventsRouter);
 // app.use('/users', usersRouter);
 

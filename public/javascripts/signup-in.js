@@ -4,21 +4,21 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
         label = $this.prev('label');
         // console.log(e);
         if (e.type === 'keyup') {
-          console.log(e.type, 'keyup');
+          // console.log(e.type, 'keyup');
               if ($this.val() === '') {
             label.removeClass('active highlight');
           } else {
             label.addClass('active highlight');
           }
       } else if (e.type === 'blur') {
-        console.log(e.type, 'blur');
+        // console.log(e.type, 'blur');
           if( $this.val() === '' ) {
               label.removeClass('active highlight'); 
               } else {
               label.removeClass('highlight');   
               }   
       } else if (e.type === 'focus') {
-        console.log(e.type, 'focus');
+        // console.log(e.type, 'focus');
         if( $this.val() === '' ) {
               label.removeClass('highlight'); 
               } 

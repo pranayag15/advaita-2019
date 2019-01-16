@@ -9,10 +9,25 @@
   }
   
   body {
+    position: absolute;
+    height:100%;
+    width:100%;
     background: #000000;
     font-family: 'Titillium Web', sans-serif;
+    overflow:none;
   }
-  
+  canvas {
+/*     position:absolute; */
+    z-index:-999;
+    position: fixed;
+    filter:brightness(40%);
+    top: 0;
+    left: 0;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
   a {
     text-decoration: none;
     color: darkcyan;
@@ -21,18 +36,27 @@
   a:hover {
     color: darkcyan;
   }
-  #particles-js {
+.logoheading {
   position: absolute;
-  width: 90%;
-  height: 100%;
-  z-index: -99;
+  height: 18vh;
+  width: 25vh;
+  margin-top: -1.5% ;
+  margin-left: 0%;
+  z-index: 100;
+}
+.logoheading:hover{
+  filter: brightness(110%);
 }
 
   .form {
     /*background: rgba(19, 35, 47, 0.9);*/
-    /*background-color:black;*/
+    position: absolute;
+    top:10%;
+    left:30%;
+    text-align: center;
+    background-color:black;
     padding: 40px 40px 20px 40px;
-    max-width: 600px;
+    width:40%;
     margin: 0px auto;
     border: solid;
     border-width: 1px;
@@ -87,7 +111,7 @@
     -webkit-transform: translateY(6px);
             transform: translateY(6px);
     left: 13px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(31, 221, 223, 0.28);
     transition: all 0.25s ease;
     -webkit-backface-visibility: hidden;
     pointer-events: none;
@@ -188,3 +212,70 @@
     text-align: right;
   }
   
+  @media (max-width: 640px){
+    .form
+    {
+      left:10%;
+      width:80%;
+      top:15%;
+      font-size:2vh;
+      /*height:70%;*/
+    }
+    .tab-group li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 2vh;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+  }
+  .label {
+    /*position: relative;*/
+    font-size:2vh;
+    width:100%;
+    text-align:center;
+    left:0;
+    /*margin-bottom: 30px;*/
+  }
+  input , textarea{
+    height:4.5vh;
+    padding: 5px ;
+    font-size:1.5vh;
+  }
+  .label.active {
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+    left: 1px;
+    font-size: 10px;
+  }
+  h1
+  {
+    font-size:2vh;
+  }
+  .button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    /*padding-bottom: 0px;*/
+    font-size: 1.5vh;
+    /*font-weight: 600;*/
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: darkcyan;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+  }
+  .logoheading
+  {
+    position:fixed;
+    height:10vh;
+    width:15vh;
+  }
+  }

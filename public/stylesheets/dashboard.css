@@ -1,0 +1,257 @@
+@font-face{
+  src: url("../fonts/Prime\ Regular.otf") format("opentype");
+  font-family: prime;
+}
+@font-face{
+  src: url("../fonts/DenverRegular.ttf");
+  font-family: denver;
+}
+@font-face{
+  src: url("../fonts/Modeka.otf") format("opentype");
+  font-family: modeka;
+}
+@font-face{
+  src: url("../fonts/ONEDAY.ttf");
+  font-family: oneday;
+}
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{
+	position: absolute;;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-color:black;
+}
+
+/*Profile*/
+.profile
+{
+	position: absolute;
+	z-index: 90;
+	left: 0;
+	width: 50%;
+	top: 0;
+	height: 92%;
+	font-size: 2vh;
+}
+.profile img
+{
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	width: 30vh;
+	height: 30vh;
+	border-style: solid;
+	border-color: black;
+	border-radius: 100%;
+}
+.logoheading {
+  position: absolute;
+  height: 18vh;
+  width: 25vh;
+  margin-top: -1.5% ;
+  margin-left: 0%;
+  z-index: 100;
+}
+.logoheading:hover{
+  filter: brightness(110%);
+}
+.details
+{
+	font-family: 'Noto Serif', serif;
+	font-size: 28px;
+	letter-spacing: 2px;
+	position: relative;
+	text-align: center;
+	left: -20%;
+	color: white;
+	top: 50%;
+	line-height: 25px;
+}
+.progress {
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  transform: rotate(-90deg) rotateX(180deg);
+}
+
+.progress circle {
+	stroke-dashoffset: 0;
+  	transition: stroke-dashoffset 1s ease;
+  	stroke: white;
+  	stroke-width: 0.4vh;
+}
+
+.progress .bar {
+	stroke:grey;
+}
+
+.progressdiv {
+  position: relative;
+}
+
+.progressdiv:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 35px;
+  transform: translate(-50%, -50%);
+  content: attr(data-percent) " %";
+}
+/*List*/
+
+.List
+{
+	z-index: 999;
+	position: absolute;
+	left: 40%;
+	top: 10%;
+	width: 50%;
+	height: 80%;
+	/*height: auto;*/
+	font-size: 1.6vh;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+::-webkit-scrollbar {
+  width: 0.1vh;
+}
+
+#card
+{
+	/*position: relative;*/
+	float:right;
+	width: 40%;
+	height: 30%;
+	padding:2vh;
+	color: white;
+}
+.title
+{
+	text-align: center;
+	width:100%;
+	background-color:white;
+	color:black;
+	font-size:2vh;
+    margin-top:-35%;
+}
+.button
+{
+	text-align: center;
+}
+button
+{
+	cursor: default;
+	background-color: black;
+	color: white;
+	border:none;
+	padding: 4vh;
+	font-size: 1.5vh;
+}
+
+/*Footer*/
+
+/* Header */
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+#large-header {
+  background-image: url("https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg");
+}
+.main-title {
+  position: absolute;
+  z-index: -999;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+.demo-1 .main-title {
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em;
+}
+.main-title .thin {
+  font-weight: 200;
+}
+@media only screen and (max-width: 768px) {
+  .demo-1 .main-title {
+    font-size: 3em;
+  }
+}
+
+
+.footer
+{
+	z-index: 999;
+	font-size: 2vh;
+	position: absolute;
+	top: 94%;
+	height: 6.5%;
+	width: 100%;
+	background-image: linear-gradient(black, darkcyan);
+	border-style: solid;
+	border-color:black;
+	border-top-right-radius: 10vh;
+	border-top-left-radius: 10vh;
+}
+
+.footer a{
+	font-family: oneday;
+	font-size: 23px;
+	text-transform: uppercase;
+	bottom: 1.6vh;
+	letter-spacing: 2px;
+	font-weight: 900;
+}
+.Status
+{
+	position: absolute;
+	/*bottom: 1vh;*/
+	left: 10%;
+	color: white;
+	text-decoration: none;
+}
+.Events
+{
+	position: absolute;
+	/*bottom: 1vh;*/
+	left: 45%;
+	color: white;
+	text-decoration: none;
+}
+.Logout
+{
+	position: absolute;
+	/*bottom: 1vh;*/
+	left: 80%;
+	color: white;
+	text-decoration: none;
+}
+
+canvas {
+/*     position:absolute; */
+    z-index:-999;
+    position: fixed;
+    filter:brightness(40%);
+    top: 0;
+    left: 0;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
