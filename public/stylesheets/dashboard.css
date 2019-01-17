@@ -32,9 +32,9 @@ body{
 {
 	position: absolute;
 	z-index: 90;
-	left: 0;
+	left: 5%;
 	width: 50%;
-	top: 0;
+	top: 5%;
 	height: 92%;
 	font-size: 2vh;
 }
@@ -64,6 +64,7 @@ body{
 {
 	font-family: 'Noto Serif', serif;
 	font-size: 28px;
+	text-transform: capitalize;
 	letter-spacing: 2px;
 	position: relative;
 	text-align: center;
@@ -71,6 +72,9 @@ body{
 	color: white;
 	top: 50%;
 	line-height: 25px;
+}
+#cllgname{
+	text-transform: uppercase;
 }
 .progress {
   display: block;
@@ -106,7 +110,7 @@ body{
 
 .List
 {
-	z-index: 999;
+	z-index: 99;
 	position: absolute;
 	left: 40%;
 	top: 10%;
@@ -124,7 +128,7 @@ body{
 #card
 {
 	/*position: relative;*/
-	float:right;
+	float:left;
 	width: 40%;
 	height: 30%;
 	padding:2vh;
@@ -132,12 +136,19 @@ body{
 }
 .title
 {
+	position:relative;
 	text-align: center;
+	font-family: monospace;
+	font-weight: 700;
+	text-transform: capitalize;
+	z-index:99;
 	width:100%;
-	background-color:white;
-	color:black;
-	font-size:2vh;
-    margin-top:-35%;
+	background-color:black;
+	opacity:0.6;
+	color:white;
+	font-size:3vh;
+  margin-top:-35%;
+  text-transform: uppercase;
 }
 .button
 {

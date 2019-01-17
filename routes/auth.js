@@ -6,7 +6,7 @@ var Category  = require("../models/category"),
     Events    = require("../models/events");
     User      = require("../models/register");
 
-router.get("/register", (req, res) => {
+router.get("/register", loggedIn,(req, res) => {
     var data ={
         name1: '',
         name2: '',
@@ -20,7 +20,7 @@ router.get("/register", (req, res) => {
     res.render("signup-in", data);
 });
 
-router.post("/register", (req, res) => {
+router.post("/register",(req, res) => {
     req.checkBody('name1', 'You must have a name').notEmpty();
     req.checkBody('name2', 'You must have a name').notEmpty();
     req.checkBody('email', 'Email is empty').isEmail().notEmpty();
@@ -82,7 +82,7 @@ router.post("/register", (req, res) => {
     }
 });
 
-router.get("/dashboard", (req, res)=>{
+router.get("/dashboard", isLoggedin,(req, res)=>{
     if(req.user){
         User.findById(req.user._id).populate("events").exec((err, eve) => {
          if(err){
@@ -109,7 +109,7 @@ router.get("/data", (req, res)=>{
     }) 
 });
 
-router.post("/login", passport.authenticate('local',
+router.post("/login", loggedIn ,passport.authenticate('local',
     {
         successRedirect: '/events',
         failureRedirect: "/register",
@@ -130,6 +130,14 @@ function isLoggedin(req, res, next){
       return next();
   }  
   res.redirect("/register");
+}
+
+function loggedIn(req, res, next){
+    if(req.user){
+        res.redirect("/dashboard");
+    } else {
+        return next();
+    }
 }
 
 module.exports = router;

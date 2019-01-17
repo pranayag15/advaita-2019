@@ -100,6 +100,21 @@ overflow: hidden;
 	outline: none;
 	color: darkcyan;
 }
+.user
+{
+	position:absolute;
+	right:7%;
+	top:4%;
+	color:white;
+	font-size:3vh;
+	border-style: solid;
+	border-width:0.2vh;
+	border-color:white;
+	border-radius: 10%;
+	padding:1vh;
+	background:none;
+		
+}
 /*.IIIT*/
 /*{*/
 /*	position: absolute;*/
@@ -353,6 +368,10 @@ h1{
 	/*	height:40vh;*/
 	/*	width:20vh;*/
 	/*}*/
+	.user
+	{
+		display:none;
+	}
 	.Wsponsor
 {
 	position: absolute;
@@ -524,6 +543,11 @@ h1{
 		width: 40vh;
 		height:40vh;
 	}
+	
+	.user
+	{
+		display:none;
+	}
 	.Wsponsor
 {
 	position: absolute;
@@ -671,6 +695,10 @@ h1{
 	/*	height:40vh;*/
 	/*	width:20vh;*/
 	/*}*/
+	.user
+	{
+		display:none;
+	}
 	#bm
 	{
 		right:-10%;

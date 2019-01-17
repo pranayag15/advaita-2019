@@ -20,14 +20,20 @@
   <canvas id='c'></canvas>
 <!--</div>-->
 	<div class="profile">
-		<img src="https://avatars3.githubusercontent.com/u/33354423?s=460&v=4">
+		<% if(user.gender=="Male"||user.gender=="male"||user.gender=="M"||user.gender=="m"){ %>
+			<img src="https://iwgdfguidance.org/wp-content/uploads/2017/12/default_user_male.jpg">
+		<% } else if(user.gender=="Female"||user.gender=="female"||user.gender=="F"||user.gender=="f") { %>
+			<img src="https://saage.edu.sg/wp-content/uploads/2018/08/Unknown-Girl.jpg"> 
+		<% } else { %>
+			<img src="https://thumbs.dreamstime.com/t/default-male-avatar-profile-picture-icon-grey-man-photo-placeholder-vector-illustration-88414414.jpg">
+		<% }%>
 		<div class="details">
-			<b><%#= user.name %> Sandeep Chutiya</b>
+			<b><%= user.name %></b>
 			<!--<b>Name: Sandeep Chutiya</b>-->
 		</br></br>
-			<b><%#= user.college %>IIIT Bhubaneswar</b>
+			<b id="cllgname" ><%= user.college %></b>
 		</br></br>
-			<b> <%#= user.phone %>9064507905</b>
+			<b>+91-<%= user.phone %></b>
 		</br></br>
 <!--			<div class="progressdiv"  data-percent="86">-->
 <!--  <svg class="progress" width="178" height="178" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">-->
@@ -39,22 +45,21 @@
 		</div>
 
 	</div>
-	<div class="List">
-		<div id="card">
-		<img height="100%"; width="100%" src="hovercop.jpg">
-		<div class="back123"></div>
-		<div class="descriptiion123"></div>
-		<div class="title">Hovercop</div>
-	</div>
+<div class="List">
+		<!--<div id="card">-->
+		<!--	<img height="100%"; width="100%" src="hovercop.jpg">-->
+		<!--	<div class="back123"></div>-->
+		<!--	<div class="descriptiion123"></div>-->
+		<!--	<div class="title">Hovercop</div>-->
+		<!--</div>-->
 	<!-- <div id="card1"></div> -->
 	
-	<%# eventList.forEach(function(event){ %>
+	<% eventList.forEach(function(event){ %>
 	<div id="card">
-		<img height="100%"; width="100%" src="hovercop.jpg">
-		<div class="title"><%#= event.name %></div>
-		<div class="title">Chut</div>
+		<img style="position:static;z-index:-999;filter:brightness(80%); "height="100%"; width="100%" src="<%= event.img%>">
+		<div class="title"><%= event.name %></div>
 	</div>
-	<%# }) %>
+	<% }) %>
 
 </div>
 	<div class="footer">

@@ -28,7 +28,7 @@ router.get("/details/:id", (req, res)=>{
             }
         });
     })
-router.post("/details/:id", (req, res)=>{
+router.post("/details/:id", isLoggedin,(req, res)=>{
     // console.log(req.user);
     User.findOne({username: req.user.username}, (err, user) => {
         if(err){

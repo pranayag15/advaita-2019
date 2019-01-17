@@ -102,7 +102,10 @@ font-family: 'Amaranth', sans-serif;
   color: white;
 }
 #box {
+  position: absolute;
   display: flex;
+  bottom: 5%;
+  left: 3%;
   align-items: center;
   justify-content: center;
   width: 200px;
@@ -177,4 +180,19 @@ font-family: 'Amaranth', sans-serif;
   align-items: center;
   overflow-x:hidden;
  }
+ #box {
+  position: relative;
+  display: flex;
+  /*bottom: 5%;*/
+  /*left: 3%;*/
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-family: calendar;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
 }
