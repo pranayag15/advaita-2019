@@ -56,6 +56,7 @@ router.post("/register",(req, res) => {
             city: req.body.city,
             phone: req.body.phone,
             gender: req.body.gender,
+            payment: "",
             password: req.body.password
         });
         User.register(newUser, req.body.password, function(err, user){

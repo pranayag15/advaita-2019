@@ -37,7 +37,7 @@
     color: darkcyan;
   }
 .logoheading {
-  position: absolute;
+  position: fixed;
   height: 18vh;
   width: 25vh;
   margin-top: -1.5% ;

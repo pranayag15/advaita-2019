@@ -4,6 +4,7 @@ var passportLocalMongoose = require('passport-local-mongoose');
 var registrationSchema = new mongoose.Schema({
     username: String,
     password: String,
+    payment: String,
     name: {type: String, index:true, sparse: true},
     college: {type: String, index:true, sparse: true},
     city:{type:  String, index:true, sparse: true},
