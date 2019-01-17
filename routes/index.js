@@ -61,6 +61,9 @@ router.get("/coming", (req, res) => {
 router.get("/sponsorship", (req, res)=>{
   res.render("sponsorcontact");
 });
+router.get("/addsponsor", (req, res)=>{
+  res.render("addsponsor");
+});
 
 function isLoggedin(req, res, next){
   if(req.isAuthenticated()){

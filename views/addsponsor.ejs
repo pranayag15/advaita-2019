@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+    <title>ADVAITA</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
+    <!--<link rel="stylesheet" href="/stylesheets/events.css">-->
+     <link rel="stylesheet" href="/stylesheets/navbar.css"> 
+     <style>
+     body
+     {
+         background-color:black;
+         position:absolute;
+         height:100%;
+         width:100%;
+     }
+     .logoheading {
+  position: absolute;
+  height: 18vh;
+  width: 25vh;
+  margin-top: -1.5% ;
+  margin-left: 0%;
+  z-index: 100;
+}
+         .first
+         {
+             position:absolute;
+             top:20%;
+             width:40%;
+             left:5%;
+             height:60%;
+         }
+         .second
+         {
+             position:absolute;
+             top:20%;
+             width:40%;
+             left:55%;
+             height:60%;
+         }
+         .button{
+             position:absolute;
+             top:85%;
+             left:46%;
+             width:10%;
+             height:6%;
+             border:darkcyan;
+             border-style:solid;
+             border-width:0.5vh;
+             background:none;
+             color:white;
+             font-family:monospace;
+             text-transform:uppercase;
+             margin-bottom:2vh;
+             letter-spacing:0.5vh;
+             font-size:3vh;
+         }
+         canvas {
+/*     position:absolute; */
+    z-index:-999;
+    position: fixed;
+    filter:brightness(40%);
+    top: 0;
+    left: 0;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+         @media screen and (max-width:720px)
+         {
+             .first
+             {
+                 left:2%;
+                 top:10%;
+                 width:95%;
+             }
+             .second
+             {
+                 width:95%;
+                 top:75%;
+                 left:2%;
+             }
+             .button
+             {
+                 top:140%;
+                 left:25%;
+                 width:50%;
+             }
+                  .logoheading {
+  position: fixed;
+  height: 10vh;
+  width: 15vh;
+  margin-top: -1.5% ;
+  margin-left: 0%;
+  z-index: 100;
+}
+         }
+     </style>
+</head>
+<body>
+    <% include navbar %>
+    	<canvas id='c'></canvas>
+    <a href="/"><img class="logoheading" src="/images/advaita.png"></a>
+    
+        <img class="first" src="/images/10.jpeg">
+        <img class="second" src="/images/11.jpeg">
+        <a href="/contact"><button class="button" >Contact</button></a>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+        <script src="/javascripts/events.js"></script>
+        <script src="/javascripts/menu.js"></script>
+        <script src="javascripts/back.js"></script>
+    
+</body>
+</html>

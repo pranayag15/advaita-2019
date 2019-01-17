@@ -1,0 +1,21 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+body
+{
+    position:absolute;
+    height:100%;
+    width:100%;
+    left:100%;
+    background-color:black;
+}
+.logoheading {
+  position: absolute;
+  height: 18vh;
+  width: 25vh;
+  margin-top: -1.5% ;
+  margin-left: 0%;
+  z-index: 100;
+}

@@ -1,3 +1,7 @@
+@font-face{
+  src: url("../fonts/Bavro-Regular.ttf");
+  font-family: bavro;
+}
 *{
 	padding: 0;
 	margin: 0;
@@ -325,6 +329,21 @@ h1{
   transform-origin:bottom;
   width:0;
 }
+.WTS
+{
+	position:absolute;
+	font-family: monospace;
+	bottom: 1vh;
+	color:darkcyan;
+	left:38%;
+	border: 1px solid;
+    padding: 0 6px 0 6px;
+    border-radius: 5%;
+	cursor:pointer;
+	font-size:3vh;
+	z-index:999;
+	text-transform: uppercase;
+}
 
 .light + .light {
   animation:top-left 4s ease-in-out alternate infinite;
@@ -374,6 +393,17 @@ h1{
 	{
 		display:none;
 	}
+	.WTS
+{
+	position:absolute;
+	bottom: 1vh;
+	color:darkcyan;
+	left:35%;
+	/*color:white;*/
+	cursor:pointer;
+	font-size:2vh;
+	z-index:999;
+}
 	.Wsponsor
 {
 	position: absolute;
@@ -545,7 +575,17 @@ h1{
 		width: 40vh;
 		height:40vh;
 	}
-	
+		.WTS
+{
+	position:absolute;
+	bottom: 1vh;
+	color:darkcyan;
+	left:35%;
+	/*color:white;*/
+	cursor:pointer;
+	font-size:2vh;
+	z-index:999;
+}
 	.user
 	{
 		display:none;
@@ -701,6 +741,17 @@ h1{
 	{
 		display:none;
 	}
+		.WTS
+{
+	position:absolute;
+	bottom: 1vh;
+	color:darkcyan;
+	left:35%;
+	/*color:white;*/
+	cursor:pointer;
+	font-size:2vh;
+	z-index:999;
+}
 	#bm
 	{
 		right:-10%;
