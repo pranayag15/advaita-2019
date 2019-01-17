@@ -127,6 +127,7 @@ $(window).ready(function(){
           {
           if(load123 == 2){
            $('#loading').fadeOut('slow',function(){$(this).remove();});
+           
           }
            load123 = load123 + 1;
           }

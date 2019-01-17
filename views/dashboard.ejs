@@ -12,6 +12,14 @@
 	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
 	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
 	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131746284-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131746284-1');
+</script>
 </head>
 <body>
 	<!--<div id="large-header" class="large-header">-->
@@ -65,8 +73,13 @@
 	<div class="footer">
 		<a href="/logout" class="Logout">Logout</a>
 		<a href="/events" class="Events">Add Events</a>
-		<a href="#" class="Status">Payment  Status </a>
+		<a href="#" onclick="soon()" class="Status">Payment  Status </a>
 	</div>
+	<script>
+		function soon(){
+			alert("Payment Gateway Soon.")	
+		}
+	</script>
 	<script type="text/javascript" src="/javascripts/dashboard.js"></script>
 	 <script src="javascripts/back.js"></script>
 	  <script src="/javascripts/menu.js"></script>

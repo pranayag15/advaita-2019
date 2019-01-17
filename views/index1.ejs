@@ -99,9 +99,11 @@
 	<img class="balloon2" src="/images/balloon.png">
 	 <div class="light"></div>
 	<div class="light"></div> 
-	<button class="fa fa-user user"> Sign In/Up
-	  <a href="/dashboard" ></a>
-	</button>	
+	<% if(currentUser){ %>
+	  <a href="/dashboard" ><button class="user"> Dashboard </button></a>
+	<% } else { %>
+	  <a href="/register" ><button class="fa fa-user user"> Login/Register </button></a>
+	<% }%>
 	<div id="upper" class="upper"  ></div>
 
 <!-- Javascript links -->

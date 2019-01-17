@@ -116,11 +116,11 @@ router.post("/login", loggedIn ,passport.authenticate('local',
         failureFlash: "Incorrect username or password",
         successFlash: "Welcome to cosmo carnival"
     }), (req, res)=>{
-        console.log(req.session);
+        // console.log(req.session);
 });
 
 router.get('/logout', (req, res)=>{
-    console.log(req.user);
+    // console.log(req.user);
     req.logout();
     res.redirect("/");
 });

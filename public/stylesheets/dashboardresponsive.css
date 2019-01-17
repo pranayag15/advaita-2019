@@ -1,3 +1,7 @@
+@font-face{
+  src: url("../fonts/ONEDAY.ttf");
+  font-family: oneday;
+}
 *{
 	padding:0;
 	margin:0;
@@ -12,20 +16,23 @@ body
 .footer
 {
 	position: absolute;
-	top:0;
+	font-family: oneday;
+	top:95%;
 	width: 100%;
 	height: 5%;
 	color:white;
-	background-image: linear-gradient(grey,black);
-	font-size: 1vh;
-
+	background-image: linear-gradient(black,darkcyan);
+	font-size: 11px;
+	letter-spacing: 2px;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .Status
 {
 	position: absolute;
 	bottom: 1vh;
-	left: 10%;
+	left: 7%;
 	color: white;
 	text-decoration: none;
 }
@@ -57,7 +64,7 @@ body
 	opacity:0.6;
 	color:white;
 	font-size:3vh;
-    margin-top:-35%;
+    margin-top:-20%;
 }
 .profile
 {
@@ -86,6 +93,7 @@ body
 	text-align: center;
 	color: white;
 	top: 50%;
+	font-size:2vh;
 }
 .progressdiv , .progressbar
 {
@@ -95,9 +103,9 @@ body
 {
 	/*padding-top: 5%;*/
 	position: absolute;
-	top: 35%;
+	top: 45%;
 	width: 100%;
-	height:60%;
+	height:45%;
 	font-size: 1.6vh;
 	text-align: center;
 	overflow-x: hidden;

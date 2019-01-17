@@ -42,12 +42,12 @@ router.post("/details/:id", isLoggedin,(req, res)=>{
                 }
               }                
             if(result==0){
-                console.log("not found");   
+                // console.log("not found");   
                 user.events.push(req.params.id);
                 user.save();
             } else {
                 req.flash('eventRegister', "Already Registered");
-                console.log("found");
+                // console.log("found");
             }
             res.redirect("/details/"+req.params.id);
             // console.log(req.user);
