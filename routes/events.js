@@ -79,10 +79,6 @@ router.get("/description", (req, res) => {
    res.render("details"); 
 });
 
-router.get('/error', function(req, res, next) {
-    console.log(req.flash);
-    res.send("han han");
-});
 
 router.get('*', (req, res) => {
    res.render("error"); 

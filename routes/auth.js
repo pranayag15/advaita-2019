@@ -99,16 +99,16 @@ router.get("/dashboard", isLoggedin,(req, res)=>{
 
 });
 
-router.get("/data", (req, res)=>{
-   User.findById(req.user._id).populate("events").exec((err, eve) => {
-        if(err){
-            console.log(err);
-        } else {
-            // console.log(eve);
-            res.json(eve.events);
-        }
-    }) 
-});
+// router.get("/data", (req, res)=>{
+//   User.findById(req.user._id).populate("events").exec((err, eve) => {
+//         if(err){
+//             console.log(err);
+//         } else {
+//             // console.log(eve);
+//             res.json(eve.events);
+//         }
+//     }) 
+// });
 
 router.post("/login", loggedIn ,passport.authenticate('local',
     {

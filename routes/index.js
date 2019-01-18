@@ -34,13 +34,13 @@ router.get("/sponsors", (req, res)=>{
   res.render("sponsorsnew");
 });
 
-router.get("/user", (req, res)=>{
-  if(req.user){
-    res.json(req.user);
-  } else {
-    res.json("bht chul h");
-  }
-});
+// router.get("/user", (req, res)=>{
+//   if(req.user){
+//     res.json(req.user);
+//   } else {
+//     res.json("bht chul h");
+//   }
+// });
 
 router.get("/gallery", (req, res) => {
   res.render("gallery");
