@@ -71,8 +71,8 @@ router.get("/sports", (req, res)=>{
   res.render("sports");
 });
 
-router.get("/photography", (req, res)=>{
-  res.render("photography");
+router.get("/foodfest", (req, res)=>{
+  res.render("foodfest");
 });
 
 router.get("/description", (req, res) => {

@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+            <link href="https://fonts.googleapis.com/css?family=Happy+Monkey|Quicksand|Work+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/eventlist.css">
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADVAITA</title>
+</head>
+<body style="background-image: url(/images/bacground/food.jpg);" >
+      <a href="/"><img class="logoheading" src="/images/advaita.png"></a>
+    <% include navbar %>
+    <!--<p class="categoryhead" style="font-size: 4.5rem;" >Tech</p>-->
+    <div>
+        <ul type="none" class="event-nav desktop" id="menu">
+             <li><button class="raise active"  onclick="iframeSRC('5c476d5309b2490db1ee2353')" ><a href="#" id="event4">The baker's table</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2354')" ><a href="#" id="event4">Shole parathe</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2355')" ><a href="#" id="event4">Maggie chef</a></button></li>
+            
+        </ul>
+    </div>
+    
+    <div>
+        <ul type="none" class="event-nav1 desktop" id="menu">
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2357')" ><a href="#" id="event4">Golgappe King</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2358')" ><a href="#" id="event4">Taste buddy</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2356')" ><a href="#" id="event4">stringed delicacy</a></button></li>
+        </ul>
+    </div>
+    
+    <div class="body1">
+        <iframe id="framy" height="100%" width="100%" src="/details/5c476d5309b2490db1ee2353"></iframe>
+    </div>
+    <div class="back" ></div>
+    <div id="notch" onclick="notchToggel()">
+        Events
+    </div>
+    <div id="notch-menu" >
+        <ul type="none" class="event-nav" id="mobile">
+             <li><button class="raise active"  onclick="iframeSRC('5c476d5309b2490db1ee2353') ; mobile()" ><a href="#" id="event4">The baker's table</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2354') ; mobile()" ><a href="#" id="event4">Shole parathe</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c2d0e89cdb906004115c9e7') ; mobile()" ><a href="#" id="event4">Maggie chef</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2357') ; mobile()" ><a href="#" id="event4">Golgappe King</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2358') ; mobile()" ><a href="#" id="event4">Taste buddy</a></button></li>
+            <li><button class="raise"  onclick="iframeSRC('5c476d5409b2490db1ee2356') ; mobile()" ><a href="#" id="event4">Stringed delicacy</a></button></li>
+        </ul>
+    </div>
+
+<button id="close" class="fa fa-close" onclick="close2()"style="border-radius: 50vh; width:8vh" ></button>
+        
+    <!--<div id="notch1" onclick="notchToggel1()">-->
+    <!--    Menu-->
+    <!--</div>    -->
+     <!--<div id="notch-menu1" ></div>-->
+     <!--   <ul type="none" class="event-nav1" id="mobile1">-->
+     <!--        <li><button class="raise active"  onclick="iframeSRC('5c2b99848082f7006a6f5ca7') ; mobile1()" ><a href="#" id="event4">ROCKATHON</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca8') ; mobile1()" ><a href="#" id="event4">ACOUSTICA</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99868082f7006a6f5ca9') ; mobile1()" ><a href="#" id="event4">FOOTLOOSE</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5caa') ; mobile1()" ><a href="#" id="event4">LA MODE</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b99888082f7006a6f5cab') ; mobile1()" ><a href="#" id="event4">CYPHER</a></button></li>-->
+     <!--       <li><button class="raise"  onclick="iframeSRC('5c2b998a8082f7006a6f5cac') ; mobile1()" ><a href="#" id="event4">TILL I COLLAPSE</a></button></li>-->
+     <!--   </ul>-->
+     <!--   <button id="close1" onclick="close1()" >Close</button>-->
+        
+        
+        
+        
+    <script>
+        // var header = document.getElementById("myDIV");
+        var i=0;
+var btns = document.getElementsByClassName("raise");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+};
+        function notchToggel()
+        {
+            document.getElementById("notch").style.display = "none";
+            document.getElementById("notch-menu").style.display = "block";
+            document.getElementById("mobile").style.display = "block";
+            document.getElementById("close").style.display = "block";
+        };
+        function notchToggel1()
+        {
+            document.getElementById("notch1").style.display = "none";
+            document.getElementById("notch-menu1").style.display = "block";
+            document.getElementById("mobile1").style.display = "block";
+            document.getElementById("close1").style.display = "block";
+        };
+        function iframeSRC(x){
+            // alert("done");
+            // console.log(document.getElementById("framy").src);
+            var src = "/details/"+x;
+            // console.log(src);
+            document.getElementById("framy").src = src;
+        };
+        function mobile()
+        {
+            document.getElementById("notch").style.display = "block";
+            document.getElementById("notch-menu").style.display = "none";
+            document.getElementById("mobile").style.display = "none";
+            document.getElementById("close").style.display = "none";
+        };
+        function mobile1()
+        {
+            document.getElementById("notch1").style.display = "block";
+            document.getElementById("notch-menu1").style.display = "none";
+            document.getElementById("mobile1").style.display = "none";
+            document.getElementById("close1").style.display = "none";
+        };
+        function close2()
+        {
+            document.getElementById("notch").style.display = "block";
+            document.getElementById("notch-menu").style.display = "none";
+            document.getElementById("mobile").style.display = "none";
+            document.getElementById("close").style.display = "none";
+        }
+        function close1()
+        {
+            document.getElementById("notch1").style.display = "block";
+            document.getElementById("notch-menu1").style.display = "none";
+            document.getElementById("mobile1").style.display = "none";
+            document.getElementById("close1").style.display = "none";
+        }
+                function hidenav()
+        {
+           var width=$(window).width();
+            // document.getElementById("notch1").style.display = "block";
+            if(i%2==0 && width>480)
+            {
+                var btns = document.getElementsByClassName("event-nav1");
+for (var j = 0; j < btns.length; j++) {
+  var current = document.getElementsByClassName("event-nav1");
+  current[0].style.display = "none";
+  }
+}
+            
+            else if(i%2!=0 && width>480)
+            {
+                var btns = document.getElementsByClassName("event-nav1");
+for (var j = 0; j < btns.length; j++) {
+  var current = document.getElementsByClassName("event-nav1");
+  current[0].style.display = "block";
+  }
+            }
+            i=i+1;
+            
+        }
+        $(document).ready(function(){
+            console.log("yes");
+        });
+    </script>
+    <script src="/javascripts/menu.js"></script>
+</body>
+</html>
+           

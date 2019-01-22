@@ -12,6 +12,7 @@ var createError     = require('http-errors'),
      LocalStrategy  = require('passport-local'),
      expressValidator = require('express-validator'),
      seedDB      = require('./seed'),
+     foodDB      = require('./foodseed'),
      seedRegister   = require('./seedRegister');
      app.use(expressValidator());
 
@@ -25,6 +26,7 @@ var indexRouter = require('./routes/index'),
     eventsRouter= require('./routes/events');
 
 // seedDB();
+// foodDB();
 // seedRegister();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

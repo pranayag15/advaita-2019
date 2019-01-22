@@ -100,12 +100,12 @@ router.get("/dashboard", isLoggedin,(req, res)=>{
 });
 
 // router.get("/data", (req, res)=>{
-//   User.findById(req.user._id).populate("events").exec((err, eve) => {
+//   User.find({}).populate("events", 'name').exec((err, eve) => {
 //         if(err){
 //             console.log(err);
 //         } else {
 //             // console.log(eve);
-//             res.json(eve.events);
+//             res.json(eve);
 //         }
 //     }) 
 // });
