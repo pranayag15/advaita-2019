@@ -40,6 +40,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('static'));
 app.use(flash());
 
 app.use(session({
@@ -65,12 +66,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/health-check', (req, res)=>{
+    res.sendStatus(200);
+})
+
 app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/', eventsRouter);
 // app.use('/users', usersRouter);
-
-
 
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("ADVAITA server has started");
