@@ -79,8 +79,8 @@ router.get("/technical", (req, res)=>{
   res.render("technical");
 });
 
-router.get("/theatre", (req, res)=>{
-  res.render("theatre");
+router.get("/art", (req, res)=>{
+  res.render("art");
 });
 
 router.get("/sports", (req, res)=>{

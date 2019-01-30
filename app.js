@@ -17,8 +17,9 @@ var createError     = require('http-errors'),
      app.use(expressValidator()),
      redirect    = require("express-redirect");
 
-redirect(app); 
-var router = express.Router();
+var artDB       = require('./artseed');
+// artDB();
+
 // var bodyParser = require('body-parser');
 var server = require('http').createServer(app);
 app.use(bodyParser.json());
@@ -33,10 +34,6 @@ var indexRouter = require('./routes/index'),
     authRouter  = require('./routes/auth'),
     testRouter  = require('./routes/test'),
     eventsRouter= require('./routes/events');
-app.use(router);
-// require('./routes/admin/testtxn')(app);
-require('./routes/admin/pgredirect')(app);
-// require('./routes/admin/response')(app);
 
 // seedDB();
 // foodDB();
@@ -88,10 +85,6 @@ app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/', eventsRouter);
 app.use('/', testRouter);
-// require('./routes/admin/testtxn')(app);
-require('./routes/admin/pgredirect')(app);
-// require('./routes/admin/response')(app);
-// app.use('/users', usersRouter);
 
 server.listen(process.env.PORT, process.env.IP, function(){
    console.log("ADVAITA server has started");

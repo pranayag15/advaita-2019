@@ -41,7 +41,7 @@ body{
     /*background-image:url(https://images.unsplash.com/photo-1515550962725-a254324472e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);*/
     background-size:cover;
     background-repeat:no-repeat;
-    /*background-position:left;*/
+    background-position:center;
     overflow: hidden;
 }
 
