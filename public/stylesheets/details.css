@@ -68,6 +68,7 @@ html, body {
 font-family: 'Amaranth', sans-serif;
   font-weight: 100;
   font-size: 18px;
+  /*padding-bottom: 10vh;*/
   color: white;
 }
 
@@ -102,18 +103,38 @@ font-family: 'Amaranth', sans-serif;
   color: white;
 }
 #box {
-  position: absolute;
+  /*position: relative;*/
   display: flex;
-  bottom: 5%;
-  left: 3%;
+  padding-bottom:-5%;
+  /*left: 3%;*/
+  float:left;
   align-items: center;
   justify-content: center;
   width: 200px;
   height: 50px;
   color: white;
-  font-family: calendar;
+  font-family: prime;
   font-size: 2rem;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+#rule1234{
+  padding-bottom:2vh;
+}
+#box1 {
+   /*position: relative;*/
+  display: flex;
+  bottom: 5%;
+  /*left: 3%;*/
+  float:right;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-family: prime;
+  font-size: 2rem;
+  letter-spacing: 4px;
   cursor: pointer;
 }
 .gradient-border {
@@ -121,6 +142,7 @@ font-family: 'Amaranth', sans-serif;
   background: #1D1F20;
   position: relative;
   border-width: 0px;
+  color:white;
   /* border-radius: var(--borderWidth); */
 }
 .gradient-border:after {
@@ -185,13 +207,30 @@ font-family: 'Amaranth', sans-serif;
   display: flex;
   /*bottom: 5%;*/
   /*left: 3%;*/
+  float:left;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 50px;
+  width: 15vh;
+  height: 5vh;
   color: white;
   font-family: calendar;
-  font-size: 2rem;
+  font-size: 2vh;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+#box1 {
+  position: relative;
+  display: flex;
+  float:right;
+  /*bottom: 5%;*/
+  /*left: 3%;*/
+  align-items: center;
+  justify-content: center;
+  width: 15vh;
+  height: 5vh;
+  color: white;
+  font-family: calendar;
+  font-size: 2vh;
   letter-spacing: 2px;
   cursor: pointer;
 }

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard</title>
+	<title>ADVAITA</title>
 	<link rel="stylesheet" media="screen and (min-width: 720px)"  type="text/css" href="/stylesheets/dashboard.css">
 	<link rel="stylesheet" media="screen and (max-width: 720px)" type="text/css" href="/stylesheets/dashboardresponsive.css">
+	<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	 <script src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
 	     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 	      <link rel="stylesheet" href="/stylesheets/navbar.css"> 
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
 	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
 	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
@@ -53,7 +56,7 @@
 		</div>
 
 	</div>
-<div class="List">
+<div class="List" id="list">
 		<!--<div id="card">-->
 		<!--	<img height="100%"; width="100%" src="hovercop.jpg">-->
 		<!--	<div class="back123"></div>-->
@@ -64,24 +67,76 @@
 	
 	<% eventList.forEach(function(event){ %>
 	<div id="card">
+		<form onsubmit="return submitResult();" action="/dlt/<%= event._id %>" method="POST" >
+			<button id="delete" class="fa fa-close" style="color:white"></button>
+		</form>
+		<script type="text/javascript">
+			function submitResult() {
+			   if ( confirm("Are you sure you want to unregister ?") == false ) {
+			      return false ;
+			   } else {
+			      return true ;
+			   }
+			}
+		</script>
 		<img style="position:static;z-index:-999;filter:brightness(80%); "height="100%"; width="100%" src="<%= event.img%>">
-		<div class="title"><%= event.name %></div>
+		<div class="title"><%= event.name %> </div>
+		
 	</div>
 	<% }) %>
 
 </div>
+<div class="payment" id="payment">
+	<table>
+		<tr>
+			<th>Event</th>
+			<th>Amount</th>
+			<th>Status</th>
+			<!--<th>Pay</th>-->
+		</tr>
+		<% eventList.forEach(function(event){ %>
+		<% if(event.amount != undefined && event.amount!=0){ %>
+			<% var x=0; %>
+			<%#= console.log("#", event.amount)%>
+		        <form id="form1" method="POST" action="/testtxn" >
+	    	        <tr>
+	    	            <td><%= event.name%></td>
+	    	            <input type="hidden" name="ORDERID" value="<%= event._id%>" >
+	    	            
+	    	            <%# } else {%>
+	    	            	<td><input name="TXN_AMOUNT" value="<%= event.amount%>" readonly ></td>
+	    	            <%# }%>
+	    	            <% for(var i=0; i<user.paytmpayment.length; i++){ %>
+	    	            	<% if(user.paytmpayment[i].EVENTNM == event.name){ %>
+	    	            		
+	    	            		<% if(user.paytmpayment[i].STATUS == "TXN_SUCCESS"){ %>
+	    	            			<% x++; %>
+		    	            		<%# console.log("#", user.paytmpayment[i].EVENTNM) %>
+		    	            		<% if(x==1){ %> 
+		    	            			<td><button style="background-color: rgb(68, 157, 68);" type="button" >PAID</button></td>
+		    	            		<% }%>
+	    	            		<% }%>
+	    	            	<% }%>
+	    	            <% } %>
+		            	<% if(x==0){ %>
+	            			<td><button style="cursor: pointer;" >PAY NOW</button></td>
+		            	<% }%>
+	    	            <!--<td><button>Pay Now</button></td>-->
+	    	        </tr>
+		        </form>
+	        <% }%>
+		<% }) %>
+	</table>
+</div>
 	<div class="footer">
 		<a href="/logout" class="Logout">Logout</a>
 		<a href="/events" class="Events">Add Events</a>
-		<a href="#" onclick="soon()" class="Status">Payment  Status </a>
+		<a href="#"id="status" onclick="payment()" class="Status">Payment </a>
+		<a href="#" id="events" onclick="list()" class="Status"style="display:none">Your events</a>
 	</div>
-	<script>
-		function soon(){
-			alert("Payment Gateway Soon.")	
-		}
-	</script>
 	<script type="text/javascript" src="/javascripts/dashboard.js"></script>
 	 <script src="javascripts/back.js"></script>
 	  <script src="/javascripts/menu.js"></script>
+
 </body>
 </html>

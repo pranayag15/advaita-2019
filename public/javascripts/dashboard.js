@@ -12,6 +12,21 @@
 	}
 })();
 
+
+function payment()
+{
+	document.getElementById("payment").style.display = "block";
+	document.getElementById("list").style.display = "none";
+	document.getElementById("status").style.display = "none";
+	document.getElementById("events").style.display = "block";
+}
+function list()
+{
+	document.getElementById("payment").style.display = "none";
+	document.getElementById("list").style.display = "block";
+	document.getElementById("status").style.display = "block";
+	document.getElementById("events").style.display = "none";
+}
 // (function() {
 
 //     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;

@@ -1,5 +1,16 @@
+var schema = require('./payment');
 var mongoose = require('mongoose');
 var passportLocalMongoose = require('passport-local-mongoose');
+
+var paymentSchema = new mongoose.Schema({
+    EVENTNM: String,
+    ORDERID: String,
+    TXNID: String,
+    TXNAMOUNT: String,
+    TXNDATE: String,
+    STATUS: String
+});
+var payment = mongoose.model("Payment", paymentSchema);
 
 var registrationSchema = new mongoose.Schema({
     username: String,
@@ -16,10 +27,19 @@ var registrationSchema = new mongoose.Schema({
             sparse: true,
             ref: "Event"
         }
-    ]
+    ],
+    paytmpayment: [paymentSchema]
 });
 
 
 registrationSchema.plugin(passportLocalMongoose);
 
-module.exports = mongoose.model("User", registrationSchema);
+ var User = mongoose.model("User", registrationSchema);
+var Payment = mongoose.model("Payment", paymentSchema);
+
+// module.exports = {
+//     user: function() { return User; },
+//     hello: function() {return payment;}
+// }
+
+module.exports = {Payment: Payment, User: User};

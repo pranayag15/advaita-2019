@@ -14,16 +14,29 @@ var createError     = require('http-errors'),
      seedDB      = require('./seed'),
      foodDB      = require('./foodseed'),
      seedRegister   = require('./seedRegister');
-     app.use(expressValidator());
+     app.use(expressValidator()),
+     redirect    = require("express-redirect");
+
+redirect(app); 
+var router = express.Router();
+// var bodyParser = require('body-parser');
+var server = require('http').createServer(app);
+app.use(bodyParser.json());
 
 var Event     =  require('./models/events'),
     Category  =  require('./models/category'),
-    User      =  require('./models/register');
+    models      =  require('./models/register'),
+    User  = models.User;
 
 var indexRouter = require('./routes/index'),
     // usersRouter = require('./routes/users'),
     authRouter  = require('./routes/auth'),
+    testRouter  = require('./routes/test'),
     eventsRouter= require('./routes/events');
+app.use(router);
+// require('./routes/admin/testtxn')(app);
+require('./routes/admin/pgredirect')(app);
+// require('./routes/admin/response')(app);
 
 // seedDB();
 // foodDB();
@@ -34,6 +47,7 @@ app.set('view engine', 'ejs');
 
 // mongoose.connect("mongodb://localhost/advaita_v2" , { useNewUrlParser: true });
 mongoose.connect("mongodb://pranay:advaita2k19@ds135747.mlab.com:35747/advaita", {useNewUrlParser: true});
+// mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds111065.mlab.com:11065/advaita2", {useNewUrlParser: true});
 // app.use(logger('dev')); //morgan used for loggging request details.
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -73,8 +87,12 @@ app.get('/health-check', (req, res)=>{
 app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/', eventsRouter);
+app.use('/', testRouter);
+// require('./routes/admin/testtxn')(app);
+require('./routes/admin/pgredirect')(app);
+// require('./routes/admin/response')(app);
 // app.use('/users', usersRouter);
 
-app.listen(process.env.PORT, process.env.IP, function(){
+server.listen(process.env.PORT, process.env.IP, function(){
    console.log("ADVAITA server has started");
 });

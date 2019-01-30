@@ -117,6 +117,7 @@ body{
 	width: 50%;
 	height: 80%;
 	/*height: auto;*/
+	/*display: none;*/
 	font-size: 1.6vh;
 	overflow-y:scroll;
 	overflow-x:hidden;
@@ -124,7 +125,86 @@ body{
 ::-webkit-scrollbar {
   width: 0.1vh;
 }
+form
+{
+	position: relative;
+	z-index:99;
+	text-align:right;
+	margin-bottom:-5%;
+}
+form button
+{
+	/*position:static;*/
+	/*z-index:999;*/
+	/*margin-top:5%;*/
+	/*padding-top:10%;*/
+	position: relative;
+	background:none;
+	color:white;
+	font-size:3.5vh;
+	margin-bottom:-5vh;
+	padding:0vh;
+}
+.payment
+{
+	z-index: 99;
+	position: absolute;
+	left: 40%;
+	top: 10%;
+	width: 50%;
+	height: 80%;
+	display: none;
+	/*height: auto;*/
+	font-size: 1.6vh;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+::-webkit-scrollbar {
+  width: 0.1vh;
+}
+table
+{
+	background:none;
+	color:white;
+	width:100%;
+	border-collapse: collapse;
+}
+th
+{
+	font-family: oneday;
+	font-size: 28px;
+	text-transform: uppercase;
+	bottom: 1.6vh;
+	letter-spacing: 2px;
+	padding-bottom: 1.5em;
+}
+td{
+	font-family: monospace;
+		font-size: 23px;
+	  padding-top: .3em;
+    padding-bottom: .3em;
+    text-transform: uppercase;
+}
+tr
+{
+	font-size:2vh;
+	text-align:center;
+	/*padding:1vh;*/
+}
 
+td button
+{
+	font-size: 15px;
+	min-width: 90px;
+	padding:1.3vh;
+	background-color:rgb(40, 96, 144);
+}
+td input{
+	background:none;
+	color:white;
+	border: none;
+	text-align: center;
+}
 #card
 {
 	/*position: relative;*/
@@ -208,7 +288,7 @@ button
 
 .footer
 {
-	z-index: 999;
+	z-index: 900;
 	font-size: 2vh;
 	position: absolute;
 	top: 94%;

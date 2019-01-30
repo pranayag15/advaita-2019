@@ -1,14 +1,35 @@
-// $(document).ready(function () {
 
-//     $('span').click(function() {
-//         $('.overlay').toggleClass('anim');
-//     });
-
-//     $('.animation').click(function(){
-//         $('.anim').toggleClass('reverse-animation');
-//     })
-// });
 $('#toggle').click(function() {
    $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
   });
+  
+  
+    $(window).on('keydown',function(event)
+       {
+       if(event.keyCode==123)
+       {
+           // alert('Entered F12');
+           return false;
+       }
+       else if(event.ctrlKey && event.shiftKey && event.keyCode==73)
+       {
+           // alert('Entered ctrl+shift+i')
+           return false;  //Prevent from ctrl+shift+i
+       }
+       else if(event.ctrlKey && event.keyCode==73)
+       {
+           // alert('Entered ctrl+shift+i')
+           return false;  //Prevent from ctrl+shift+i
+       }
+       else if(event.ctrlKey && event.keyCode==85)
+       {
+           // alert('Entered ctrl+shift+u')
+           return false;  //Prevent from ctrl+shift+i
+       }
+   });
+   $(document).on("contextmenu",function(e)
+   {
+      // alert('Right Click Not Allowed')
+      e.preventDefault();
+   });

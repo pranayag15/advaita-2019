@@ -6,7 +6,9 @@ var eventSchema = new mongoose.Schema(
         name: String,
         img: String,
         price: {type: Number},
-        description:String
+        description:String,
+        amount: {type: Number},
+        link: String
     }
 )
 

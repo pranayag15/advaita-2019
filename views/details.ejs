@@ -61,6 +61,11 @@
         <% } else { %>
             <div class="gradient-border" id="box" onclick="myfunc()" >REGISTER</div>
         <% }%>
+        <% if(details.link){ %>
+            <form style="padding-bottom:5%" action="<%= details.link %>" method="GET" target="_blank">
+                <button class="gradient-border" id="box1" type="submit" >RULES</button>
+            </form>
+        <% }%>
     </div>
     <div id="existingEvent" style="display: none;" ><%= existingEvent[0] %></div>
 <script>

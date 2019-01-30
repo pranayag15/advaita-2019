@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/response.css">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+<title>Merchant Check Out Page</title>
+</head>
+<body>
+<% if (restdata == 'true') { 	%>
+	<center><h1>Validation Succesful</h1></center>
+	<%= console.log("**********", paramlist['STATUS']) %>
+	<% if(paramlist['STATUS'] == 'TXN_SUCCESS'){ %>
+		<center><h3>Screenshot this page. You may need this at registration desk!</h3></center>
+	<% }%>
+	
+     <%     }else
+		{ 	%>
+            <center><h1>Validation Unsuccesful</h1></center>
+            <center><h3>Try Again.</h3></center>
+       <%  }	%>
+		<form method="post" name="f1"> 
+		<table border="1">
+			<tbody>
+			<tr>
+					<th>Label</th>
+					<th>Value</th>
+				</tr>
+
+			<% if(typeof paymentDetail == 'object'){ %>
+				<% for (name in paymentDetail ) { %>
+					<tr>
+						<td><label><%= name %></label></td>
+						<td><input id='<%= name %>'tabindex="1" maxlength="30" size="55" name='<%= name %>' autocomplete="off" value='<%= paymentDetail[name] %>' readonly>
+						</td>
+					</tr>
+				<% }%>
+			<% } else {%>
+			  <% if(typeof paramlist == 'object' && paramlist.length != 0){ %>
+				<% for (name in paramlist ) { %>
+					<% if(name!="MID" && name!="BANKTXNID" && name!="CHECKSUMHASH"){ %>
+						<tr>
+							<td><label><%= name %></label></td>
+							<td><input id='<%= name %>'tabindex="1" maxlength="30" size="55" name='<%= name %>' autocomplete="off" value='<%= paramlist[name] %>' readonly>
+							</td>
+						</tr>
+					<% }%>
+				<% }%>
+			  <% }%>
+			<% }%>
+			</tbody>
+		</table>
+<script type="text/javascript">
+	//document.f1.submit();
+</script>
+	</form>
+	<center><a href="/dashboard" ><button>DASHBOARD</button></a></center>
+<script src="/javascripts/history-stealer.js"></script>
+</body>
+</html>

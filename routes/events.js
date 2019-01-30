@@ -3,7 +3,8 @@ var express = require('express'),
 
 var Category  = require("../models/category"),
     Events    = require("../models/events");
-    User      = require("../models/register");
+    model      = require("../models/register"),
+    User = model.User;
 
 // router.get('/show/:category', (req, res)=>{
 //     Category.findOne({title: req.params.category}).populate("events").exec((err, cato)=>{
@@ -28,6 +29,7 @@ router.get("/details/:id", (req, res)=>{
             }
         });
     })
+//ADD EVENT TO DASHBOARD
 router.post("/details/:id", isLoggedin,(req, res)=>{
     // console.log(req.user);
     User.findOne({username: req.user.username}, (err, user) => {
@@ -51,6 +53,20 @@ router.post("/details/:id", isLoggedin,(req, res)=>{
             }
             res.redirect("/details/"+req.params.id);
             // console.log(req.user);
+        }
+    })
+});
+//DELETE REGISTERED EVENT
+router.post("/dlt/:id", function(req, res){
+    User.findOne({username: req.user.username}, (err, user) => {
+        if(err){
+            console.log(err);
+        } else {
+            var i = user.events.indexOf(req.params.id);
+            console.log(i);
+            user.events.splice(i, 1);
+            user.save();
+            res.redirect("/dashboard");
         }
     })
 });
