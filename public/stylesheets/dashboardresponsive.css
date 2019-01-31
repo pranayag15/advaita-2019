@@ -139,11 +139,28 @@ td input{
 	border: none;
 	text-align: center;
 }
+#query123
+{
+	position: relative;
+	width:80%;
+	display: none;
+	margin-left:10%;
+	margin-right:10%;
+	border-style: solid;
+	border-color: darkcyan;
+	z-index:999;
+	/*background-color:white;*/
+	color:black;
+} 
+#query123 span
+{
+	padding-left:2%;
+}
 .List
 {
 	/*padding-top: 5%;*/
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	width: 100%;
 	height:45%;
 	font-size: 1.6vh;

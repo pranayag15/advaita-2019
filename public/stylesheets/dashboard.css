@@ -73,6 +73,23 @@ body{
 	top: 50%;
 	line-height: 25px;
 }
+#query123
+{
+	position: relative;
+	width:80%;
+	display: none;
+	margin-left:10%;
+	margin-right:10%;
+	border-style: solid;
+	border-color: darkcyan;
+	z-index:999;
+	/*background-color:white;*/
+	color:black;
+} 
+#query123 span
+{
+	padding-left:2%;
+}
 #cllgname{
 	text-transform: uppercase;
 }

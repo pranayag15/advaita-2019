@@ -27,6 +27,22 @@ function list()
 	document.getElementById("status").style.display = "block";
 	document.getElementById("events").style.display = "none";
 }
+
+function query()
+{
+	if(document.getElementById("query1234").innerHTML=="Payment Issues?")
+	{
+	document.getElementById("query123").style.display = "block";
+	document.getElementById("offer").style.display = "none";
+	document.getElementById("query1234").innerHTML = "close"
+	}
+	else
+	{
+		document.getElementById("query123").style.display = "none";
+		document.getElementById("query1234").innerHTML = "Payment Issues?"
+		document.getElementById("offer").style.display = "block";
+	}
+}
 // (function() {
 
 //     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
