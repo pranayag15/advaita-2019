@@ -8,7 +8,8 @@ var eventSchema = new mongoose.Schema(
         price: {type: Number},
         description:String,
         amount: {type: Number},
-        link: String
+        link: String,
+        link2: String
     }
 )
 

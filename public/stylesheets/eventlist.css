@@ -68,7 +68,7 @@ body{
 {
     z-index:999;
     position: absolute;
-    top:30%;
+    top:25%;
     left:2%;
     width:16%;
     color:white;
@@ -84,7 +84,7 @@ body{
 {
     z-index:999;
     position: absolute;
-    top:30%;
+    top:25%;
     left:85%;
     color:white;
     font-size:2vh;
