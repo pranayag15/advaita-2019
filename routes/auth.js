@@ -101,6 +101,17 @@ router.get("/dashboard", isLoggedin,(req, res)=>{
     }
 });
 
+router.get("/data", (req, res)=>{
+  models.User.find({}).populate("events", 'name').exec((err, eve) => {
+        if(err){
+            console.log(err);
+        } else {
+            // res.render("data", {compData: eve});
+            res.json(eve);
+        }
+    });
+});
+
 // router.get("/paynow", isLoggedin,(req, res)=>{
 //     if(req.user){
 //         models.User.findById(req.user._id).populate("events").exec((err, eve) => {
@@ -118,7 +129,7 @@ router.get("/dashboard", isLoggedin,(req, res)=>{
 
 router.post("/login", loggedIn ,passport.authenticate('local',
     {
-        successRedirect: '/events',
+        successRedirect: '/dashboard',
         failureRedirect: "/register",
         failureFlash: "Incorrect username or password",
         successFlash: "Welcome to cosmo carnival"
