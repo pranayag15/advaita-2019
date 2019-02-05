@@ -64,7 +64,7 @@ router.get("/sponsorship", (req, res)=>{
 router.get("/addsponsor", (req, res)=>{
   res.render("addsponsor");
 });
-router.get("/pronight", (req, res)=>{
+router.get("/pronite", (req, res)=>{
   res.render("pronight");
 });
 
