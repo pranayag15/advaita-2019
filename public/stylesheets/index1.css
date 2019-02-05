@@ -121,6 +121,22 @@ overflow: hidden;
 	cursor: pointer;
 		
 }
+.pro{
+	position:absolute;
+	z-index:99;
+	right:20%;
+	top:4%;
+	color:white;
+	font-size:3vh;
+	border-style: solid;
+	border-width:0.2vh;
+	border-color:darkcyan;
+	border-radius: 10%;
+	padding:1vh;
+	text-decoration:none;
+	background:none;
+	cursor: pointer;
+}
 /*.IIIT*/
 /*{*/
 /*	position: absolute;*/
@@ -404,6 +420,22 @@ h1{
 	font-size:2vh;
 	z-index:999;
 }
+.pro{
+	position:absolute;
+	z-index:99;
+	right:15%;
+	top:3%;
+	color:white;
+	font-size:2vh;
+	border-style: solid;
+	border-width:0.2vh;
+	border-color:darkcyan;
+	border-radius: 10%;
+	padding:1vh;
+	text-decoration:none;
+	background:none;
+	cursor: pointer;
+}
 	.Wsponsor
 {
 	position: absolute;
@@ -586,6 +618,22 @@ h1{
 	font-size:2vh;
 	z-index:999;
 }
+.pro{
+	position:absolute;
+	z-index:99;
+	right:15%;
+	top:3%;
+	color:white;
+	font-size:2vh;
+	border-style: solid;
+	border-width:0.2vh;
+	border-color:darkcyan;
+	border-radius: 10%;
+	padding:1vh;
+	text-decoration:none;
+	background:none;
+	cursor: pointer;
+}
 	.user
 	{
 		display:none;
@@ -751,6 +799,22 @@ h1{
 	cursor:pointer;
 	font-size:2vh;
 	z-index:999;
+}
+.pro{
+	position:absolute;
+	z-index:99;
+	right:15%;
+	top:3%;
+	color:white;
+	font-size:2vh;
+	border-style: solid;
+	border-width:0.2vh;
+	border-color:darkcyan;
+	/*border-radius: 10%;*/
+	padding:1vh;
+	text-decoration:none;
+	background:none;
+	cursor: pointer;
 }
 	#bm
 	{
