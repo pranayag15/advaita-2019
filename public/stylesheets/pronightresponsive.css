@@ -81,7 +81,7 @@ canvas {
     position: absolute;
     z-index:99;
     top:190%;
-    left:25%;
+    left:30%;
     text-decoration: none;
     color:white;
     font-size:3vh;
@@ -94,7 +94,7 @@ canvas {
     position: absolute;
     z-index:99;
     top:300%;
-    left:25%;
+    left:30%;
     text-decoration: none;
     color:white;
     font-size:3vh;
@@ -108,7 +108,7 @@ canvas {
     position: absolute;
     z-index:99;
     top:490%;
-    left:25%;
+    left:30%;
     text-decoration: none;
     color:white;
     font-size:3vh;
