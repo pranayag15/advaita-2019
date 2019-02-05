@@ -1,0 +1,124 @@
+@font-face{
+  src: url("../fonts/Bavro-Regular.ttf");
+  font-family: bavro;
+}
+body {
+  /*position:absolute;*/
+  overflow-x: hidden;
+  background-color: #fff;
+  /*overflow-y:hidden;*/
+  background-color:black;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+canvas {
+/*     position:absolute; */
+    z-index:-999;
+    position: fixed;
+    filter:brightness(40%);
+    top: 0;
+    left: 0;
+    height:100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logoheading {
+  position: fixed;
+  height: 10vh;
+  width: 15vh;
+  margin-top: -7.5% ;
+  margin-left: 0%;
+  z-index: 100;
+}
+.logoheading:hover{
+  filter: brightness(110%);
+}
+.img1
+{
+    position:absolute;
+    top:10%;
+    height:80%;
+    width:90%;
+    left:5%;
+}
+.img2
+{
+    position:absolute;
+    top:90%;
+    height:100%;
+    width:90%;
+    left:5%;
+}
+.img5
+{
+    position:absolute;
+    top:210%;
+    height:90%;
+    width:90%;
+    left:5%;
+}
+.img3
+{
+    position:absolute;
+    top:310%;
+    height:90%;
+    width:90%;
+    left:5%;
+}
+.img4
+{
+    position:absolute;
+    top:400%;
+    height:90%;
+    width:90%;
+    left:5%;
+}
+.download1
+{
+    position: absolute;
+    z-index:99;
+    top:190%;
+    left:25%;
+    text-decoration: none;
+    color:white;
+    font-size:3vh;
+    border-style: solid;
+    border-color: darkcyan;
+    padding:1vh;
+}
+.download
+{
+    position: absolute;
+    z-index:99;
+    top:300%;
+    left:25%;
+    text-decoration: none;
+    color:white;
+    font-size:3vh;
+    border-style: solid;
+    border-color: darkcyan;
+    padding:1vh;
+}
+
+.download2
+{
+    position: absolute;
+    z-index:99;
+    top:490%;
+    left:25%;
+    text-decoration: none;
+    color:white;
+    font-size:3vh;
+    border-style: solid;
+    border-color: darkcyan;
+    padding:1vh;
+}
+.heading
+{
+    margin-top:5%;
+    color:white;
+    font-size:4vh;
+}
