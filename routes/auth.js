@@ -145,145 +145,145 @@ router.get('/logout', (req, res)=>{
 
 
 //****************************************** PAYMENT ROUTES STARTS ******************************************************
- router.get('/testtxn', function(req,res){
-  console.log("in restaurant");
-  console.log("--------testtxnjs----");
-res.render('testtxn.ejs',{'config' : config});
-  });
+//  router.get('/testtxn', function(req,res){
+//   console.log("in restaurant");
+//   console.log("--------testtxnjs----");
+// res.render('testtxn.ejs',{'config' : config});
+//   });
 
 
-  router.post('/testtxn',function(req, res) {
-        // console.log("POST Order start");
-        var oid = req.user._id + req.body.ORDERID.toString(); 
-        var roid = oid + Math.floor(Math.random() * 90 + 10);
-        var eveId = oid.substring(24, 49);
-        // console.log(roid);
-        var paramlist = {
-            MID: 'ZXwCxM85479435848315',
-            INDUSTRY_TYPE_ID :  'Retail',
-            CUST_ID : req.user._id.toString(),
-            CHANNEL_ID :  'WEB',
-            WEBSITE: 'DEFAULT'
-        }
-        var paramarray = new Array();
-        for (name in paramlist)
-        {
-            paramarray[name] = paramlist[name] ;
-        }
-        // console.log("concatenated ORDER_ID ", req.user._id + req.body.ORDERID);
-        Events.findById(eveId, (err, evu)=>{
-           if(err){
-               console.log(err);
-           } else {
-            //   console.log(evu.amount);
-            //   console.log(typeof(evu.amount))
-              paramarray['TXN_AMOUNT'] = evu.amount.toString();
-                // paramarray['TXN_AMOUNT'] ='1';
-           }
-        })
-        .then(()=>{
-            paramarray["ORDER_ID"] = roid;
-            paramarray['CALLBACK_URL'] = 'https://www.advaita.io/response';    
-            var PAYTM_MERCHANT_KEY = config.PAYTM_MERCHANT_KEY;
-            // console.log(paramarray);
-            checksum.genchecksum(paramarray, PAYTM_MERCHANT_KEY, function (err, result) 
-            {
-               res.render('pgredirect.ejs',{ 'restdata' : result });
-            });
-            // console.log("POST Order end");            
-        })
- });
+//   router.post('/testtxn',function(req, res) {
+//         // console.log("POST Order start");
+//         var oid = req.user._id + req.body.ORDERID.toString(); 
+//         var roid = oid + Math.floor(Math.random() * 90 + 10);
+//         var eveId = oid.substring(24, 49);
+//         // console.log(roid);
+//         var paramlist = {
+//             MID: 'ZXwCxM85479435848315',
+//             INDUSTRY_TYPE_ID :  'Retail',
+//             CUST_ID : req.user._id.toString(),
+//             CHANNEL_ID :  'WEB',
+//             WEBSITE: 'DEFAULT'
+//         }
+//         var paramarray = new Array();
+//         for (name in paramlist)
+//         {
+//             paramarray[name] = paramlist[name] ;
+//         }
+//         // console.log("concatenated ORDER_ID ", req.user._id + req.body.ORDERID);
+//         Events.findById(eveId, (err, evu)=>{
+//           if(err){
+//               console.log(err);
+//           } else {
+//             //   console.log(evu.amount);
+//             //   console.log(typeof(evu.amount))
+//               paramarray['TXN_AMOUNT'] = evu.amount.toString();
+//                 // paramarray['TXN_AMOUNT'] ='1';
+//           }
+//         })
+//         .then(()=>{
+//             paramarray["ORDER_ID"] = roid;
+//             paramarray['CALLBACK_URL'] = 'https://www.advaita.io/response';    
+//             var PAYTM_MERCHANT_KEY = config.PAYTM_MERCHANT_KEY;
+//             // console.log(paramarray);
+//             checksum.genchecksum(paramarray, PAYTM_MERCHANT_KEY, function (err, result) 
+//             {
+//               res.render('pgredirect.ejs',{ 'restdata' : result });
+//             });
+//             // console.log("POST Order end");            
+//         })
+//  });
  
-router.get('/pgredirect', function(req,res){
-    console.log("in pgdirect");
-    console.log("--------testtxnjs----");
-    res.render('pgredirect.ejs');
+// router.get('/pgredirect', function(req,res){
+//     console.log("in pgdirect");
+//     console.log("--------testtxnjs----");
+//     res.render('pgredirect.ejs');
     
-});
+// });
 
 
-router.post('/response', function(req,res){
-  console.log("in response post");
-   var paramlist = req.body;
-        var paramarray = new Array();
-        // console.log(paramlist);
-        // console.log("haha");
-        if(checksum.verifychecksum(paramlist, config.PAYTM_MERCHANT_KEY))
-        {
-          console.log("true");
-          if(req.body.STATUS=='TXN_SUCCESS'){
-                models.User.findById(req.user._id, function(error, user){
-                    if(error){
-                        console.log(error);
-                    } else {
-                        var eveId = req.body.ORDERID.substring(24, 48);
-                        // console.log("Event id is here bitches ", eveId)
-                        Events.findById(eveId, function(err, event){
-                            if(err){
-                                console.log(err);
-                            } else {
-                                // console.log(user, "\n event data \n ", event)
-                                var newPayment = new models.Payment({
-                                    EVENTNM: event.name,
-                                    ORDERID: req.body.ORDERID,
-                                    TXNID: req.body.TXNID,
-                                    TXNAMOUNT: req.body.TXNAMOUNT,
-                                    TXNDATE: req.body.TXNDATE,
-                                    STATUS: req.body.STATUS
-                                })
-                                // console.log("saving object ", newPayment);
-                                user.paytmpayment.push(newPayment);
-                                user.save();
-                                var paymentDetail = {
-                                    username: user.name,
-                                    eventName: event.name,
-                                    email: user.username,
-                                    ORDERID: req.body.ORDERID,
-                                    TXNID: req.body.TXNID,
-                                    TXNAMOUNT: req.body.TXNAMOUNT,
-                                    TXNDATE: req.body.TXNDATE,
-                                    STATUS: req.body.STATUS
+// router.post('/response', function(req,res){
+//   console.log("in response post");
+//   var paramlist = req.body;
+//         var paramarray = new Array();
+//         // console.log(paramlist);
+//         // console.log("haha");
+//         if(checksum.verifychecksum(paramlist, config.PAYTM_MERCHANT_KEY))
+//         {
+//           console.log("true");
+//           if(req.body.STATUS=='TXN_SUCCESS'){
+//                 models.User.findById(req.user._id, function(error, user){
+//                     if(error){
+//                         console.log(error);
+//                     } else {
+//                         var eveId = req.body.ORDERID.substring(24, 48);
+//                         // console.log("Event id is here bitches ", eveId)
+//                         Events.findById(eveId, function(err, event){
+//                             if(err){
+//                                 console.log(err);
+//                             } else {
+//                                 // console.log(user, "\n event data \n ", event)
+//                                 var newPayment = new models.Payment({
+//                                     EVENTNM: event.name,
+//                                     ORDERID: req.body.ORDERID,
+//                                     TXNID: req.body.TXNID,
+//                                     TXNAMOUNT: req.body.TXNAMOUNT,
+//                                     TXNDATE: req.body.TXNDATE,
+//                                     STATUS: req.body.STATUS
+//                                 })
+//                                 // console.log("saving object ", newPayment);
+//                                 user.paytmpayment.push(newPayment);
+//                                 user.save();
+//                                 var paymentDetail = {
+//                                     username: user.name,
+//                                     eventName: event.name,
+//                                     email: user.username,
+//                                     ORDERID: req.body.ORDERID,
+//                                     TXNID: req.body.TXNID,
+//                                     TXNAMOUNT: req.body.TXNAMOUNT,
+//                                     TXNDATE: req.body.TXNDATE,
+//                                     STATUS: req.body.STATUS
                                     
-                                }
-                                        for (name in paymentDetail)
-                                        {
-                                            paramarray[name] = paymentDetail[name] ;
-                                        }           
-                            }
-                        })
-                        // .then(()=>{
-                        //     console.log("inside .then() statement");
-                        //     console.log("heeeeeeeeeee");
-                        //     console.log(paramarray);
-                        //     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-                        //     res.render('response.ejs',{ 'restdata' : "true", 'paymentDetail': paramarray}); 
-                        //     return;
-                        // })
-                    }
-                })
-                // .then(()=>{
-                //     console.log("inside .then() statement");
-                //     console.log("heeeeeeeeeee");
-                //     console.log(paramarray);
-                //     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-                //     res.render('response.ejs',{ 'restdata' : "true", 'paymentDetail': paramarray}); 
-                //     return;
-                // })
-          }
-        //   } else {
-            //   console.log("outside .then() statement render");
-              res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-              res.render('response.ejs',{ 'restdata' : "true" ,'paramlist' : paramlist});
-        //   }
+//                                 }
+//                                         for (name in paymentDetail)
+//                                         {
+//                                             paramarray[name] = paymentDetail[name] ;
+//                                         }           
+//                             }
+//                         })
+//                         // .then(()=>{
+//                         //     console.log("inside .then() statement");
+//                         //     console.log("heeeeeeeeeee");
+//                         //     console.log(paramarray);
+//                         //     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+//                         //     res.render('response.ejs',{ 'restdata' : "true", 'paymentDetail': paramarray}); 
+//                         //     return;
+//                         // })
+//                     }
+//                 })
+//                 // .then(()=>{
+//                 //     console.log("inside .then() statement");
+//                 //     console.log("heeeeeeeeeee");
+//                 //     console.log(paramarray);
+//                 //     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+//                 //     res.render('response.ejs',{ 'restdata' : "true", 'paymentDetail': paramarray}); 
+//                 //     return;
+//                 // })
+//           }
+//         //   } else {
+//             //   console.log("outside .then() statement render");
+//               res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+//               res.render('response.ejs',{ 'restdata' : "true" ,'paramlist' : paramlist});
+//         //   }
           
-        }else
-        {
-           console.log("false");
-           res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-          res.render('response.ejs',{ 'restdata' : "false" , 'paramlist' : paramlist});
-            // res.redirect('/dashb/oard');
-        };
- });
+//         }else
+//         {
+//           console.log("false");
+//           res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+//           res.render('response.ejs',{ 'restdata' : "false" , 'paramlist' : paramlist});
+//             // res.redirect('/dashb/oard');
+//         };
+//  });
 
 //****************************************** PAYMENT ROUTES ENDS ******************************************************
 

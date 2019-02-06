@@ -53,14 +53,14 @@
 <!--</svg></div>-->
 <!--		</br>-->
 <!--		<b class="progressbar">Events registerd By you</b>-->
-		<!--<div id="offer" style="font-size:2vh;     font-weight: 900;-->
+		<div id="offer" style="font-size:2vh;     font-weight: 900;
   <!--  border: 2px solid darkcyan;-->
   <!--  width: 80%;-->
-  <!--  margin-left: 10%;"><i>MAKE YOUR PAYMENT BEFORE</br> 4-02-2019 </br>GET 5% OFF ON ALL TECH EVENTS</i></div>-->
+  <!--  margin-left: 10%;"><i>Online payment closed</i></div>
 		<!--MAKE YOUR PAYMENT BEFORE 4-02-2019 AND GET 5% OFF ON ALL TECH EVENTS-->
-		<div onclick="query()" id="query1234" style="position:relative;text-align:right;margin-right:10%;cursor:pointer;color:white;font-size:1.5vh">
-			Payment Issues?
-		</div>
+		<!--<div onclick="query()" id="query1234" style="position:relative;text-align:right;margin-right:10%;cursor:pointer;color:white;font-size:1.5vh">-->
+		<!--	Payment Issues?-->
+		<!--</div>-->
 		<div id="query123" style="color:white;font-size:2vh">
 		
 		<Span class="fa fa-whatsapp"></Span><span>9149341125</span><span>Pranay Agarwal</span></br>
@@ -116,7 +116,7 @@
 		<% if(event.amount != undefined && event.amount!=0){ %>
 			<% var x=0; %>
 			<%#= console.log("#", event.amount)%>
-		        <form id="form1" method="POST" action="/testtxn" >
+		        <!--<form id="form1" method="GET" action="#" >-->
 	    	        <tr>
 	    	            <td><%= event.name%></td>
 	    	            <input type="hidden" name="ORDERID" value="<%= event._id%>" >
@@ -137,7 +137,12 @@
 	    	            	<% }%>
 	    	            <% } %>
 		            	<% if(x==0){ %>
-	            			<td><button style="cursor: pointer;" >PAY NOW</button></td>
+	            			<td><button onclick="closed()" style="cursor: pointer;" >PAY NOW</button></td>
+	            			<script>
+	            				function closed(){
+	            					alert("PAYMENT CLOSED");
+	            				}
+	            			</script>
 		            	<% }%>
 	    	            <!--<td><button>Pay Now</button></td>-->
 	    	        </tr>
