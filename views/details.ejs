@@ -56,18 +56,21 @@
         </div>
         <br>
          <!--<div class="gradient-border" id="box"></div> -->
-        <% if(currentUser){ %>
+        <% if(currentUser  && details.name != "CSGO"){ %>
             <form action="/details/<%=details._id%>" method="post">
                 <button type="submit" class="gradient-border" id="box" onclick="return existing()" >REGISTER</button>
             </form>
         
-        <% } else { %>
+        <% } else if(details.name != "CSGO") { %>
             <div class="gradient-border" id="box" onclick="myfunc()" >REGISTER</div>
         <% }%>
         <% if(details.link){ %>
             <form style="padding-bottom:5%" action="<%= details.link %>" method="GET" target="_blank">
                 <button class="gradient-border" id="box1" type="submit" >RULES</button>
             </form>
+        <% }%>
+        <% if(details.name == "CSGO"){ %>
+            <a href="<%= details.link %>" target="_blank"><div class="gradient-border" id="box" >REGISTER</div></a>
         <% }%>
     </div>
     <div id="existingEvent" style="display: none;" ><%= existingEvent[0] %></div>
