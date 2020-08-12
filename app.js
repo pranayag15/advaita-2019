@@ -43,8 +43,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // mongoose.connect("mongodb://localhost/advaita_v2" , { useNewUrlParser: true });
-mongoose.connect("mongodb://pranay:advaita2k19@ds135747.mlab.com:35747/advaita", {useNewUrlParser: true});
-// mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds111065.mlab.com:11065/advaita2", {useNewUrlParser: true});
+// mongoose.connect("mongodb://<dbuser>:<dbpassword>@<mogo url>:<port>/<database name>", {useNewUrlParser: true});
 // app.use(logger('dev')); //morgan used for loggging request details.
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
