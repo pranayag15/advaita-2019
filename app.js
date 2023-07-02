@@ -85,6 +85,6 @@ app.use('/', authRouter);
 app.use('/', eventsRouter);
 app.use('/', testRouter);
 
-server.listen(process.env.PORT, process.env.IP, function(){
+server.listen(5000, function(){
    console.log("ADVAITA server has started");
 });
